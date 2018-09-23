@@ -1,0 +1,109 @@
+
+
+/*
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+*/
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #222;
+    color: #fff;
+    transition: all 0.3s;
+        margin-top: 50px;
+        padding: 15px;
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-transition: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+
+.citylist {
+  margin-top: -5px;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 70vh;
+  background: linear-gradient(rgba(100,100,100,.3),rgba(0,0,0,.0));
+}
+
+.spacer {
+  height: 10px;
+  background-color: rgba(0,0,0,0);
+}
+
+.cityitem {
+  font-family: "Raleway", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+  height: 29px;
+  width: 186px;
+  margin-left: 10px;
+  text-align: center;
+  padding-top: 3px;
+  padding-left: 3px;
+  transition: .1s;
+  background-color: rgba(25,25,25,.7);
+}
+
+.cityitem:hover {
+  color: #000;
+  background-color: rgba(255,255,255,.8);
+}
+
+.cityitem:active {
+  background-color: rgba(50,50,50,.3);
+}
+
+.box {
+  color: #fff;
+  background-color: rgba(200,200,200,0.3);
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0px;
+}
+
+.box::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.box:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+}
+
+.box::-ms-input-placeholder { /* Microsoft Edge */
+   color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none
+}
+
+/* OFFSET FOUNDATION6 CSS label */
+label {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.5
+}
+
+/* OFFSET FOUNDATION6 CSS ul */
+ul {
+    margin-left: 0rem;
+  }
+
+
+  .sg-activatedLink div{
+    background-color: rgba(255,255,255,0.9) !important;
+    color:#000;
+  }

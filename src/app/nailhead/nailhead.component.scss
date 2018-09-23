@@ -1,0 +1,156 @@
+
+.head {
+    height: 40px;
+      -webkit-user-select: none;
+    overflow: hidden;
+    white-space: nowrap;
+  background-color: rgba(0,0,0,.5);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+.flexhead {
+  display: flex;
+}
+
+.leftnail {
+  position: relative;
+    display: inline-block;
+    min-width: 36px;
+    margin-left: 0px;
+      cursor: pointer;
+  height: 40px;
+  width: 36px;
+background-color: rgba(100,100,100,.2);
+}
+
+.uptri {
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 16px solid grey;
+}
+
+.leftnail:hover .uptri {
+  border-bottom: 16px solid white;
+}
+
+
+.nailflex::-webkit-scrollbar {
+    height: 0px;  /* remove scrollbar space */
+  }
+
+.nailflex {
+    display: flex;
+    color: #fff;
+    margin-left: 2px;
+    margin-right: 2px;
+  height: 40px;
+  width: 224px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+background-color: rgba(0,0,0,.0);
+}
+
+.nail {
+  position: relative;
+    margin-left: 6px;
+  height: 40px;
+  min-width: 36px;
+  max-width: 36px;
+  overflow: hidden;
+background-color: rgba(0,0,0,.6);
+}
+
+.nail:hover .imglay {
+  background-color: rgba(0,0,0,.5);
+}
+
+/*
+.nail:focus .imglay {
+  background-color: rgba(255,255,255,.5);
+}
+*/
+
+.nailimg {
+object-fit: cover;
+   height: 40px;
+   max-width: 36px;
+}
+
+.imglay {
+  position: absolute;
+  top: 0px;
+  width: 36px;
+  height: 40px;
+  left: 0px;
+  background-color: rgba(255,255,255,0);
+}
+
+.imglaydemo {
+  position: absolute;
+  top: 0px;
+  width: 36px;
+  height: 40px;
+  left: 0px;
+  background-color: rgba(255,255,255,.5);
+}
+
+.nailspacer {
+    display: inline-block;
+  height: 40px;
+  min-width: 6px;
+background-color: rgba(0,0,0,.0);
+}
+
+.rightnail {
+  position: relative;
+    display: inline-block;
+        min-width: 36px;
+          cursor: pointer;
+  height: 40px;
+  width: 36px;
+background-color: rgba(100,100,100,.2);
+}
+
+.downtri {
+  position: absolute;
+  left: 6px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 16px solid grey;
+}
+
+.rightnail:hover .downtri {
+  border-top: 16px solid white;
+}
+
+.rightlist {
+    display: inline-block;
+        min-width: 60px;
+    margin-left: 2px;
+  height: 40px;
+  width: 36px;
+background-color: rgba(0,0,0,.6);
+}
+
+.w3-light-nail {
+  background-color: rgba(255,255,255,0.5)
+}
+
+.no-e-nail {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 185px;
+  font-size: 0.8em;
+  color: lightgrey;
+}

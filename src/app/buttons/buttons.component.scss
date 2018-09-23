@@ -1,0 +1,73 @@
+.infobuttons {
+  position: relative;
+  height: 47px;
+  padding-top: 4px;
+  padding-left: 5px;
+  white-space: nowrap;
+background-color: rgba(255,255,255,.6);
+}
+
+
+.slidebtnL {
+  position: absolute;
+   width: 30px;
+    height: 31px;
+     top: 8px;
+      right: 20%;
+      background-size: cover;
+      background-image: url('/assets/arrowLeft.png');
+      z-index: 1;
+}
+
+//Safari ONLY
+_:default:not(:root:root), .slidebtnL {
+  right: 19.3%;
+ }
+
+.slidebtnL:hover {
+  cursor: pointer;
+      background-image: url('/assets/arrowLeftS.png');
+}
+.slidebtnL:active {
+      background-image: url('/assets/arrowLeftS.png');
+}
+
+.mid-cam {
+font-size: 1.0em;
+ position: absolute;
+  top: 15px;
+   right: 14.7%;
+}
+
+//Safari ONLY
+_:default:not(:root:root), .mid-cam {
+  right: 13.9%;
+ }
+
+
+.slidebtnR {
+  position: absolute;
+  width: 30px;
+   height: 31px;
+   top: 8px;
+    right: 4.59%;
+     background-size: cover;
+     background-image: url('/assets/arrowRight.png');
+   }
+
+   //Safari ONLY
+_:default:not(:root:root), .slidebtnR {
+  right: 3.6%;
+ }
+
+
+   .slidebtnR:hover {
+     cursor: pointer;
+         background-image: url('/assets/arrowRightS.png');
+   }
+   .slidebtnR:active {
+         background-image: url('/assets/arrowRightS.png');
+   }
+ .btn-disable{
+  cursor: no-drop !important;
+ }

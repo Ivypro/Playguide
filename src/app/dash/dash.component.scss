@@ -1,0 +1,199 @@
+
+#content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    padding-top: 50px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+
+
+}
+
+#content.active {
+    width: 100%;
+}
+
+/*    DIV to SINK TOGGLE BUTTON UNDER NAVBARS        */
+.tognest {
+  position: relative;
+  margin-left: -3px;
+  margin-top: -2px;
+}
+
+
+// MODALS //
+
+.ticketmodal {
+position: absolute;
+top: 0px;
+margin-top: 50px;
+left: 0%;
+right: 0%;
+height: calc(100vh - 50px);
+background-color: rgba(0,0,0,.6);
+}
+
+.tmodalbox {
+  position: relative;
+  margin-top: 75px;
+  margin-left: 18%;
+  margin-right: 18%;
+  border: solid 8px rgba(255,255,255,0.6);
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px;
+  height: 450px;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.tmodalbox input {
+  border: solid 1px rgba(0,0,0,1);
+  background: white;
+  color: black;
+}
+
+.backlayer {
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  left: 0px;
+  width: 30%;
+ transition: visibility 0s .3s, opacity .3s linear;
+  cursor: zoom-out;
+  background-color: rgba(0,0,0,0.0);
+}
+
+.i-class {
+  border: solid 1px grey;
+  border-bottom: solid 0px;
+  border-right: solid 2px grey;
+
+  width: 175px; //Acts as max-width
+}
+
+.bl-text {
+  position: relative;
+  width: 100%;
+  font-size: 10px;
+  max-width: 175px;
+  height: 30px;
+  padding-top: 5px;
+  border: solid 2px grey;
+  border-top: solid 0px;
+  border-left: solid 1px grey;
+  text-align: center;
+  overflow: hidden;
+  line-height: 1.9;
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.greyinputs input {
+  width: 100%;
+  max-width: 170px;
+  padding-left: 4px;
+  border: solid 1px rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.5);
+  color: white;
+}
+
+.greyinputs input:focus {
+  background: rgba(0,0,0,0.7);
+  box-shadow: 0 0 5px red;
+}
+
+.notebox {
+  position: relative;
+  background-color: rgba(255,255,255,.4);
+  padding: 8px 10px;
+  height: 39px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.quickreset {
+  position: absolute;
+  color: rgba(0,0,0,0.7);
+  top: -82px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.quickred {
+  color: red;
+}
+
+.def {
+  cursor: default;
+}
+
+.point {
+  cursor: pointer;
+}
+
+.port {
+  position: relative;
+  height: 85px;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 130px;
+  padding: 15px;
+  text-align: left;
+  color: white;
+  cursor: text;
+  border: solid 1px white;
+  background: rgba(0,0,0,0.7);
+}
+
+.port-item {
+  position: absolute;
+  top: -20px;
+  font-weight: bold;
+  color: rgba(10,110,215,.7);
+}
+
+.port-item2 {
+  position: absolute;
+  bottom: -20px;
+  right: 8px;
+  font-size: 10px;
+  color: black;
+}
+
+@media (max-width:600px){
+  .port-item2 {
+    bottom: auto;
+top: -18px;
+  }}
+
+  #dyShareHTML {
+    resize: none;
+  }
+
+.tog-btn-style {
+  border: solid 1px rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.9);
+  border-radius: 6px;
+  background: rgba(50,50,50,0.5);
+}
+
+.tog-btn-style:hover {
+
+  background: rgba(100,100,100,0.5);
+}
+
+
+.tog-btn-style-o {
+  border-radius: 0px 0px 5px 0px;
+}

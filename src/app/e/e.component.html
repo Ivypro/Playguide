@@ -1,0 +1,161 @@
+<!-- <script onload="closeMobile()"></script>  // TRIGGERS TOO EARLY. -->
+
+<img src onerror="enter()" style="display: none;">  <!-- TRIGGERS AFTER POPUP LOAD --->
+<!--
+<img src *ngIf="mobile" onerror="$('#sidebar, #content').toggleClass('active');$('.collapse.in').toggleClass('in');$('a[aria-expanded=true]').attr('aria-expanded', 'false');" style="display: none;">  <!-- TRIGGERS AFTER POPUP LOAD --->
+
+<div class="panelheader">
+<div class="fadein centerheader w3-hide-medium w3-hide-small">Purchase tickets to this <font class="chromeBold">private event</font> or <font class="chromeBold">fundraiser</font>.</div>
+</div>
+
+<div class="panel fadein w3-card-4">
+    <div *ngIf="!loader">
+      <div class="fadein" *ngIf="post.id && post.id > 0; else dataNotFound">
+
+        <div onclick="$('#sharemodalid').show();" class="a-item-share w3-hide-medium w3-hide-large">Share:<img class="s-image1" src="/assets/facebook.png"><img class="s-image2" src="/assets/twitter.png"></div>
+          <div onclick="" class="abackitem w3-card-4"><div class="earrow">&larr; </div> <div class="etag"> Events </div></div>
+<div class="catchoverflow">
+
+        <div class="image w3-card-4">
+<!---
+          <img src="{{post.image}}" style="min-width: 100%; height: 100%; object-fit: cover;">
+--->
+<div class="myPhotos imagefill showfirst" [ngStyle]="{'background-image': 'url('+post.image+')'}">
+</div>
+
+<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+</div>
+
+<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+</div>
+
+<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+</div>
+
+<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+</div>
+
+<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+</div>
+
+<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+</div>
+
+<div class="image-line"></div>
+     </div><!-- image -->
+
+     <div class="nailbar">
+       <div class="nailbar-align w3-card-4">
+
+<div onclick="currentDiv2(1)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image+')'}">
+  <div class="naillay thumb"></div>
+</div><div class="nailspacer"></div>
+
+<div onclick="currentDiv2(2)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+  <div class="naillay thumb"></div>
+</div><div class="nailspacer"></div>
+
+<div onclick="currentDiv2(3)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+  <div class="naillay thumb"></div>
+</div><div class="nailspacer"></div>
+
+<div onclick="currentDiv2(4)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+  <div class="naillay thumb"></div>
+</div><div class="nailspacer"></div>
+
+<div onclick="currentDiv2(5)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+  <div class="naillay thumb"></div>
+</div><div class="nailspacer"></div>
+
+<div onclick="currentDiv2(6)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+  <div class="naillay thumb"></div>
+</div><div class="nailspacer"></div>
+
+</div> <!-- align -->
+  </div><!-- nailbar -->
+
+
+  <div class="lowdash">
+    <!---<div class="border-line w3-hide-small"></div>--->
+    <div class="border-line-v"></div>
+<div class="details">
+  <div class="detleft w3-hide-small">
+
+<div class="line" style="width: 100%;">
+{{post.heading}}
+</div>
+
+<div class="line seg tit" style="width: 90px;">
+Entertainment
+</div>
+<div class="line seg" style="width: calc(100% - 90px);">
+{{post.entertainment}}
+</div>
+
+<div class="line seg tit" style="width: 69px;">
+Location
+</div>
+<div class="line seg" style="width: calc(100% - 69px);">
+{{post.location}}
+</div>
+
+<div class="line seg tit" style="width: 69px;">
+Date
+</div>
+<div class="line seg" style="width: calc(100% - 69px);">
+<font class="w3-hide-medium">9 PM | </font>{{post.date}}
+</div>
+
+<div class="line seg tit" style="width: 63px;">
+Drinks
+</div>
+<div class="line seg" style="width: calc(100% - 63px);">
+{{post.drinks}}
+</div>
+
+<div class="line seg tit fill" style="width: 63px;">
+Price
+</div>
+<div class="line seg fill" style="width: calc(100% - 63px);">
+<font style="color: rgba(40,140,245,1)"><b>${{post.price}}</b></font>
+</div>
+
+
+
+</div>
+  <div class="detright">
+<font class="w3-hide-large w3-hide-medium" style="font-weight: bold">
+  {{post.location}} 9 PM | {{post.date}}<br> &nbsp; &nbsp;
+</font>
+    {{post.details}} {{post.details}} {{post.details}}
+    <font class="w3-hide-large w3-hide-medium" style=" font-weight: bold"><br>
+          Price: ${{post.price}}<br><br>
+      {{post.heading}}<br>
+      Entertainment: {{post.entertainment}}<br>
+      Drinks: {{post.drinks}}
+    </font>
+  </div>
+</div><!-- details -->
+<div class="rightbuttons">
+
+<div class="marspacer"></div>
+<div class="thebtn top w3-card-4" onclick="$('#quickloginid').show();"><div class="padspacer"></div>Buy Tickets</div>
+<div class="marspacer"></div>
+<div class="thebtn bottom w3-card-4 w3-hide-small" onclick="$('#sharemodalid').show();"><div class="padspacer"></div><font style="margin-left: 6px;">Share</font> <img class="s-image1" src="/assets/facebook.png"><img class="s-image2" src="/assets/twitter.png"></div>
+
+<div class="line-buttons w3-hide-medium w3-hide-large"></div>
+</div>
+</div><!-- lowdash -->
+
+      </div> <!-- catch --->
+    </div> <!-- NG IF found -->
+      <ng-template #dataNotFound>
+
+
+        404 EVENT NOT FOUND
+
+
+      </ng-template>
+    </div>
+    <span *ngIf="loader"><!--none --></span>
+</div>

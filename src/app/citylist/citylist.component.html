@@ -1,0 +1,116 @@
+<div class="bannercity w3-card-2" style="display: none">
+Advertisement
+</div>
+<div  class="bannercity w3-card-2">
+{{this.dataSer.events[0]?.location|| this.cityName}}
+</div>
+
+<div *ngIf="this.dataSer.photoes.length==0" style="text-align: center; height: 90%;">
+<div class="bannerdate w3-card-2">
+  <font color=darkgrey>No Listings</font>
+</div>
+
+<div class="first-spacer"></div>
+
+<div class="no-e-First" [routerLink]='["/hlogin"]' onclick="hostFunction()">
+Post The<br>First Event
+</div>
+
+</div>
+
+<div *ngFor="let event of this.dataSer.events;let i=index">
+
+    <div  class="bannerdate w3-card-2" *ngIf="this.showDemoEvents(event?.date,i)">
+        <font color="red">- Demo Events -</font>
+    </div>
+    <div  class="bannerdate w3-card-2" *ngIf="this.checkDate(event?.date,i)">
+        {{event?.date|date:"EEEE, MMM dd"}}<sup>{{event?.date|date:"dd"|dateSuffix}}</sup>
+    </div>
+
+  <div class="anchor banner w3-card-2 "  (click)="this.dataSer.selectedItem(event)" [ngClass]=" {'w4-city-2': i==this.dataSer.events.indexOf(this.dataSer.selectedEvent)}" >
+    <div class="bannerimg">
+    <img src={{event.images[0]}} class="banimg"></div>
+    <div class="banlayover w3-hide-medium w3-hide-large"></div>
+    <div class="bannerdetail">
+    {{event.heading}}<br>
+    <font size="1px">Entertainment:</font> {{event.entertainment}}<br>
+    <font size="1px">Drinks:</font> {{event.drinks}}</div>
+    <div class="bannerprice w3-card-2">{{event.price+'$'}}</div>
+    </div>
+</div>
+
+
+
+<!-- <div class="bannerdate w3-card-2">
+Friday, April 4th
+</div>
+
+<div class="anchor banner w3-card-2" (click)="closeFlip()" onclick="currentDiv(1);">
+  <div class="bannerimg">
+<img src="assets/eventHouse5.jpg" class="banimg"></div>
+<div class="banlayover w3-hide-medium w3-hide-large"></div>
+<div class="bannerdetail">
+Joe's Superbowl Party<br>
+<font size="1px">Entertainment:</font> Diplo<br>
+<font size="1px">Drinks:</font> BYOB</div>
+<div class="bannerprice w3-card-2">25$</div>
+</div>
+
+<div class="anchor banner w3-card-2" (click)="closeFlip()" onclick="currentDiv(2);">
+  <div class="bannerimg">
+<img src="assets/eventHouse2.jpeg" class="banimg"></div>
+<div class="banlayover w3-hide-medium w3-hide-large"></div>
+<div class="bannerdetail">
+Taylor Swift Halloween<br>
+<font size="1px">Entertainment:</font> Taylor Swift<br>
+<font size="1px">Drinks:</font> BYOB</div>
+<div class="bannerprice w3-card-2">45$</div>
+</div>
+
+<div class="bannerdate w3-card-2">
+Saturday, April 5th
+</div>
+
+<div class="anchor banner w3-card-2" (click)="closeFlip()" onclick="currentDiv(3);">
+  <div class="bannerimg">
+<img src="assets/eventHouse4.jpg" class="banimg"></div>
+<div class="banlayover w3-hide-medium w3-hide-large"></div>
+<div class="bannerdetail">
+Black Tie Christmas Party<br>
+<font size="1px">Entertainment:</font> Drake<br>
+<font size="1px">Drinks:</font> Catered</div>
+<div class="bannerprice w3-card-2">125$</div>
+</div>
+
+<div class="anchor banner w3-card-2" (click)="closeFlip()" onclick="currentDiv(4);">
+  <div class="bannerimg">
+<img src="assets/eventHouse6.jpg" class="banimg"></div>
+<div class="banlayover w3-hide-medium w3-hide-large"></div>
+<div class="bannerdetail">
+Corporate Mixer<br>
+<font size="1px">Capacity:</font> 230<br>
+<font size="1px">Drinks:</font> Catered</div>
+<div class="bannerprice w3-card-2">10$</div>
+</div>
+
+<div class="anchor banner w3-card-2" (click)="closeFlip()" onclick="currentDiv(5);">
+  <div class="bannerimg">
+<img src="assets/eventHouse7.jpeg" class="banimg"></div>
+<div class="banlayover w3-hide-medium w3-hide-large"></div>
+<div class="bannerdetail">
+Business Mixer<br>
+<font size="1px">Capacity:</font> 310<br>
+<font size="1px">Drinks:</font> BYOB</div>
+<div class="bannerprice w3-card-2">30$</div>
+</div>
+
+<div class="anchor banner w3-card-2" (click)="closeFlip()" onclick="currentDiv(6);">
+  <div class="bannerimg">
+<img src="assets/eventHouse1.jpeg" class="banimg"></div>
+<div class="banlayover w3-hide-medium w3-hide-large"></div>
+<div class="bannerdetail">
+Birthday Bash<br>
+<font size="1px">Entertainment:</font> Local DJ<br>
+<font size="1px">Drinks:</font> Catered</div>
+<div class="bannerprice w3-card-2">65$</div>
+</div> -->

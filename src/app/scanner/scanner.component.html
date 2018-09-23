@@ -1,0 +1,26 @@
+<!--- EVENT DETAILS ITEM --->
+<div class="myEvents showfirst" style="height: 100%;" >
+
+<div *ngIf="this.dataSer.photoes.length==0" class="uslide" style="padding-top: 90px; text-align: center;color:white">
+       <i class="fa fa-bell-slash" style="font-size: 2em; color: darkgrey;"></i>
+</div>
+
+<div *ngIf="this.dataSer.photoes.length >0" class="uslide"  [ngStyle]="{'background-image': 'url(' + this.dataSer?.currentImgUrl + ')'}">
+<a routerLink="/e/{{this.dataSer.selectedEvent?.heading.split(' ').join('-')}}"><div class="lowrighticon"></div></a>
+</div>
+<app-buttons></app-buttons>
+  <div class="infodetails" *ngIf="this.dataSer.photoes.length >0">
+<p >
+{{this.dataSer.selectedEvent?.heading||this.dataSer.events[0]?.heading}}<br>
+Location: {{this.dataSer.selectedEvent?.location||this.dataSer.events[0]?.location}}<br>
+Date & Time: {{(this.dataSer.selectedEvent?.date ? this.dataSer.selectedEvent?.date  :this.dataSer.events[0]?.date)|date:" MMMM dd"  }}{{'th 9pm'}}<br><br>
+{{this.dataSer.selectedEvent?.details||this.dataSer.events[0]?.details}}
+<br><br>Entertainment: {{this.dataSer.selectedEvent?.entertainment||this.dataSer.events[0]?.entertainment}}<br>
+Drinks: {{this.dataSer.selectedEvent?.drinks||this.dataSer.events[0]?.drinks}}
+</p>
+</div>
+
+</div>
+<!-- |date:"EEEE MMM dd" -->
+<!-- .split(' ').join('-') -->
+<!-- "{ 'background-image': 'url(' + this.dataSer.selectedEvent?.images[this.dataSer.currentPhotoIndex] + ')'}" -->

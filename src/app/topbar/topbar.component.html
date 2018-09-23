@@ -1,0 +1,61 @@
+<nav class="navbar fixed-top navbar-light">
+  <div class="container">
+    <a class="navbar-brand" onclick="styleFunction();"><img src="assets/PlayguideBrand.png" width="100" ></a>
+      <div class="userbox">
+        <!-- SHOW SIGN UP NOT LOGGED IN -->
+          <div class="signin" style="">
+            <a routerLink="../login" onclick="loginFunction(); enter()"><i class="fa fa-sign-in"></i> Sign In</a>
+          </div>
+          <!-- SHOW EMAIL ON LOGIN -->
+          <div onclick="confirm('Do you want to log out?')" class="show-email-house" style="display: none">
+
+            <i class="fa fa-power-off power-icon"></i>
+
+            <div class="catchoverflow-email">
+        <font class="email-text" style="">
+          blac2150@yahoo.com
+        </font></div>
+        </div>
+          <!-- END EMAIL -->
+      </div>
+
+      <div class="panelpop w3-grayscale-min" id="panelpopid" style="display:"><br><br>
+        Welcome to Playguide.com where you can attend home and venue events.<br><br>
+
+        <div class="welbox1 c-hide-714" >
+<div class="out-rim" style=""></div>
+        </div>
+        <div class="welbox2 c-align-475" >
+          <font color="lightblue">&#9906; Locate Events and Dinners Near You<br></font>
+            &#8226; Party with your favorite Performer<br>
+            &#8226; Celebrate at unique home venues<br>
+            &#8226; Enjoy more fun with your Friends<br>
+            &#8226; Meet new people on our <i>Guestlist</i><br>
+            &#8226; Monetize your fraternity events<br>
+            &#8226; Our app makes it all very easy<br>
+          <img src="assets/PlayguideBrand.png" width="190" style="margin-left: 15px; margin-top: 12px;">
+
+          <div class="sidediv" style="top: 23px;">
+            Join As Partner</div>
+            <div class="sidediv" style="top: 53px;">
+              Musician</div>
+              <div class="sidediv" style="top: 83px;">
+                Athlete</div>
+                <div class="sidediv" style="top: 113px;">
+                  Server</div>
+                  <div class="sidediv" style="top: 143px;">
+                    Dancer</div>
+                    <div class="sidediv" style="top: 173px;">
+                      Model</div>
+                      <div class="sidediv" style="top: 203px;">
+                        Bouncer</div>
+
+
+        </div>
+
+        <br><br>
+        <div class="popexitbtn" onclick="enter(); loginFunction()"  [routerLink]='["event/LosAngeles"]'>Browse Events</div>
+
+      </div>
+  </div>
+</nav>

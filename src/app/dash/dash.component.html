@@ -1,0 +1,160 @@
+<!-- Page Content  -->
+<div id="content" class="w3-grayscale-min" style="background-image: url('assets/pgBack7.jpg');">
+
+
+      <div class="tognest">
+        <button type="button" id="sidebarCollapse" class="btn btn-secondary tog-btn-style-o">
+
+            <span>
+              <font style="margin-left: 1px;"> +</font>
+            </span>
+        </button>
+
+
+
+          </div>
+
+
+<router-outlet></router-outlet>
+
+
+<!--- START MODALS --->
+
+<!--- PURCHASE TICKET POPUP -->
+
+
+<div class="ticketmodal" id="ticketid" style="display: none">
+<div class="tmodalbox greyinputs">
+
+<div class="backlayer w3-hide-small w3-hide-medium" onclick="$('.backlayer').css({opacity: '0', visibility: 'hidden'});">
+<img class="i-class" src={{this.dataSer.selectedEvent?.images[0]||this.dataSer.events[0]?.images[0]}}>
+<div class="bl-text">{{this.dataSer.selectedEvent?.heading}}</div>
+</div>
+
+<h5 (click)="fun()">Purchase Securely <i onclick="$('.fa-lock').css('color', 'red');" style="color: #998100" class="fa fa-lock" aria-hidden="true"></i></h5>
+  Full Name<br><input tabindex="-1"><br>
+  Credit Card #<br><input tabindex="-1"><br>
+  Expiration MM/YY<br><input tabindex="-1"><br>
+  CVV (3-Digit)<br><input tabindex="-1"><br>
+  <hr>
+  Tickets (#)<br><input [(ngModel)]="tickets" placeholder="1 - Just Me" name="tickets" id="tickets" style="padding-left: 8px;"><br>
+  <h6>Charge: {{calculateCharge(this.dataSer.selectedEvent?.price)+'$'}}</h6><br>
+  <a class="button" (click)="reset()" onClick="closeTicket(); alert('Check your email for Tickets!')" style="margin-top: -20px; -webkit-font-smoothing: antialiased;" href="#0">Purchase Tickets</a><br>
+  <button type="button" (click)="reset()" onclick="closeTicket()" style="margin-top: -7px; -webkit-font-smoothing: antialiased; border-radius: 0px; padding: 10px; line-height: 0.5" class="btn btn-secondary">Close</button>
+
+
+</div>
+
+</div>
+<!--- END PURCASHE TICKET POPUP -->
+
+<!--- QUICK LOGIN -->
+<div class="ticketmodal" id="quickloginid" style="display: none">
+<div class="tmodalbox">
+<font class="def"><h5>Quick Login <i class="fa fa-sign-in"></i></h5></font>
+
+<div class="def">
+  <font id="quick1tabid" class="point quickred" onclick="$('#quick2').hide();$('#quick1').show();$('#quick2tabid').removeClass('quickred');$('#quick1tabid').addClass('quickred');">Login</font>
+   -
+  <font id="quick2tabid" class="point" onclick="$('#quick1').hide();$('#quick2').show();$('#quick1tabid').removeClass('quickred');$('#quick2tabid').addClass('quickred');">Register</font>
+</div>
+<br>
+
+<div class="tab-content" style="max-width: 275px; margin: 0 auto;">
+
+<!--- QUICK Login TAB --->
+  <div id="quick1" class="tab-pane active">
+    <p style="cursor: default; margin-right: 70%">Email</p>
+    <input type="text" class="box" placeholder="Email" aria-describedby="exampleHelpText">
+    <p style="cursor: default; margin-right: 63%">Password</p>
+    <input type="password" class="box" placeholder="Password" aria-describedby="exampleHelpText">
+    <div class="notebox">
+      <!--- PASSWORD INCORRECT NOTIFY --->
+      <p style="display: none">
+        &#8226; Password is incorrect!
+      </p>
+
+      <!--- EMAIL NOT REGISTERED NOTIFY --->
+      <p style="display: none">
+        &#8226; That email is not registered.
+      </p>
+
+      <!--- RESET PASSWORD --->
+      <div class="quickreset" onclick="$('#resetpassid').show();">[Reset Password]</div>
+    </div>
+
+    <br><br>
+    <button type="button" onclick="$('#quickloginid').hide();alert('Login successful!');$('#ticketid').show();" style="margin-top: -7px; border-radius: 4px; -webkit-font-smoothing: antialiased;" class="f-blue btn btn-primary">Login</button>
+      <button type="button" onclick="$('#quickloginid').hide();" style="margin-top: -7px; margin-left: 15px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+
+  </div>
+
+<!--  QUICK Register TAB -->
+  <div id="quick2" class="tab-pane">
+    <input style="margin-top: 16px;" type="text" class="box" placeholder="Email" aria-describedby="exampleHelpText">
+    <input type="password" class="box" placeholder="Password" aria-describedby="exampleHelpText">
+    <input type="password" class="box" placeholder="Password Again" aria-describedby="exampleHelpText">
+    <div class="notebox">
+      <!--- UNMATCHING PASSWORDS NOTIFY --->
+      <p style="display: none">
+        &#8226; Passwords do not match!
+      </p>
+
+      <!--- UNAVAILABLE EMAIL NOTIFY --->
+      <p style="display: none">
+        &#8226; That email is registered.
+      </p>
+
+    </div>
+
+    <br><br>
+    <button type="button" onclick="$('#quickloginid').hide();alert('Registration successful!');$('#ticketid').show();" style="margin-top: -7px; border-radius: 4px; -webkit-font-smoothing: antialiased;" class="btn btn-danger">Register</button>
+      <button type="button" onclick="$('#quickloginid').hide();" style="margin-top: -7px; margin-left: 15px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+
+  </div>
+
+</div>
+
+
+</div>
+
+</div>
+<!--- END QUICK LOGIN -->
+
+<!--- RESET PASSWORD POPUP -->
+<div class="ticketmodal" id="resetpassid" style="display: none">
+<div class="tmodalbox">
+<h1><br><br><br></h1><br>
+  <input type="text" class="box" placeholder="Email" style="max-width: 300px; margin: 0 auto;" aria-describedby="exampleHelpText">
+<br>
+  <button type="button" onclick="$('#resetpassid').hide(); alert('Check your email for reset link.')" style="margin-top: -7px; border-radius: 4px; -webkit-font-smoothing: antialiased;" class="btn btn-success">Reset</button>
+    <button type="button" onclick="$('#resetpassid').hide();" style="margin-top: -7px; margin-left: 15px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+
+
+</div>
+
+</div>
+<!--- END RESET PASSWORD POPUP -->
+
+<!--- SHARE POPUP -->
+<div class="ticketmodal" id="sharemodalid" style="display: none">
+<div class="tmodalbox">
+
+<div class="port">
+<div class="port-item def">Share Link:</div>
+<div class="port-item2 point" onclick="shareFunction();$('#sharemodalid').hide();">[copy to clipboard]</div>
+
+<textarea id="dyShareHTML">/...</textarea>
+</div>
+
+    <button type="button" onclick="$('#sharemodalid').hide();" style="margin-top: 20px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+
+
+</div>
+
+</div>
+<!--- END RESET PASSWORD POPUP -->
+
+
+
+</div>

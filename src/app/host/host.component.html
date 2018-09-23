@@ -1,0 +1,336 @@
+<div class="panel fadein">
+
+  <!-- Absolute Items --->
+<!--Buttons -->
+<div class="abuttonhost">
+Hosting
+</div>
+<a routerLink="../entertain"><div onclick="staffFunction()" class="abuttonentertain">
+Entertain
+</div></a>
+<a routerLink="../security"><div onclick="securityFunction()" class="abuttonsecurity">
+Security
+</div></a>
+<!-- TIPS -->
+<div class="w3-hide-small w3-hide-medium">
+<div class="tipall tip1">
+  <div class="tipx" onclick="closeTone()">X</div>
+<font style="margin-left: 23px;">TIP 1</font>
+<div class="tiptext">Remember that you calculate capacity by allowing for 150 guests (w/ a tight fit) per 1000sq ft.</div>
+</div>
+
+<div class="tipall tip2">
+  <div class="tipx right" onclick="closeTtwo()">X</div>
+<font style="margin-right: 22px;">TIP 2</font>
+<div class="tiptext">Always consider your neighbors, limit outside music and consider sound proofing.</div>
+</div>
+
+<div class="tipall tip3">
+  <div class="tipx right" onclick="closeTthree()">X</div>
+<font style="margin-right: 22px;">TIP 3</font>
+<div class="tiptext">Remember to stow away valuables, in the future playguide may offer damage insurance, but not currently.</div>
+</div>
+
+<div class="tipall tip4">
+  <div class="tipx" onclick="closeTfour()">X</div>
+<font style="margin-left: 23px;">TIP 4</font>
+<div class="tiptext">You can share your event on social media, or hire an entertainer to share with his followers.</div>
+</div>
+
+</div>
+  <!-- END Absolute ITEMS --->
+
+<div class="catchoverflow">
+  <div class="liner">
+
+<h4>H O S T I N G</h4>
+
+<div class="content">
+  <div style="margin-top: 7px;"></div>
+<font onclick="toggle('closex', 'none'); toggle('post', '');" class="greyhov">Post Event</font> - <font class="greyhov" onclick="toggle('closex', 'none'); toggle('edit', '');">Edit Event</font>
+<img src="assets/PlayguideBrand.png" class="open1 closex" style="margin-top: 45px;" width="200">
+<!--- END FRONT PAGE --->
+
+<!--- POST EVENTS --->
+<form id="postformid">
+
+<div class="post closex" style="display: none;">
+
+          <input style="margin-left: 49px;margin-top: 10px; margin-bottom: -10px; width: 190px;" class="box" type="date" id="start" name="trip"
+                 placeholder="yyyy-mm-dd"
+                 min="2018-09-01" max="2018-12-31" />
+  <br>
+  <input class="box" placeholder=" Event Header">
+  <br>
+  <input class="box" placeholder=" Tickets (Capacity)">
+  <br>
+  <input class="box" placeholder=" $ Ticket Price">
+  <br>
+  <input id="eboxpostid" class="box closez1" type="checkbox" onchange="$('.closez1').hide();$('.openz1').show();">
+  <label class="closez1" for="eboxpostid" style="margin-top: 2px; margin-bottom:11px;white-space: nowrap">DJ/Entertaiment ?</label>
+  <!--- Hidden --->
+  <input class="box openz1" placeholder=" DJ/Entertainer Name" style="display: none">
+  <!--- End Hidden -->
+
+
+  <div class="" style="width:190px;  margin-left: 49px;margin-bottom: 10px;">
+  <select class="select">
+    <option value="drinks"> Drinks ?</option>
+    <option value="catered"> - Catered</option>
+    <option value="byob"> - BYOB</option>
+  </select>
+</div>
+
+<div class="" style="width:190px;  margin-left: 49px;margin-bottom: 10px;">
+<select class="select">
+  <option value="location"> Location</option>
+  <option value="losangeles"> - Los Angeles</option>
+  <option value="sanfrancisco"> - San Francisco</option>
+  <option value="siliconvalley"> - Silicon Valley</option>
+</select>
+</div>
+
+
+
+  <hr style="margin-top: 0px; margin-bottom: 10px;">
+  <input class="box" placeholder=" Full Address (Hidden)">
+  <br>
+
+  <div class="box photos" onclick="$('.closex').hide();$('.photouploader').show();" style="padding-top: 7px;font-size: 12px; margin-top: -3px;margin-bottom: 0px ;margin-left: 49px; height: 35px;width:190px;">
++ Add Photos
+  </div>
+
+  <br>
+
+  <textarea class="box area" placeholder="Event Details" style="margin: 0 auto; width:190px;"></textarea>
+  <br>
+
+<a class="postbtn btn btn-secondary btn-sm" onclick="$('.closex').hide();$('.open1').show();alert('Post successful.');$('#sharemodalid').show();resetPostForm();">Post</a>
+
+</div>
+
+<!--- PHOTO UPLOADER [Post] --->
+<div class="photouploader closex" style="display: none;">
+<br>
+  <h4 class="w3-center">Upload Photos</h4>
+
+  <div class="w3-content w3-display-container">
+    <div class="mySlides uslide showfirst" style="background-image: url('/assets/pgHouse.png')"> No Images</div>
+  <!---  Upload Images in this format WITH "showfirst" CLASS on FIRST IMAGE - - -->
+         <div class="mySlides uslide" style="background-image: url('/assets/eventHouse5.jpg')"></div>
+        <div class="mySlides uslide" style="background-image: url('/assets/eventHouse2.jpeg')"></div>
+         <div class="mySlides uslide" style="background-image: url('/assets/eventHouse4.jpg')"></div>
+         <div class="mySlides uslide" style="background-image: url('/assets/eventHouse6.jpg')"></div>
+
+
+    <div style="height: 38px; width: 100%; background-color: rgba(55,55,55,0.5);">
+      <label for="FileUpload1" class="button">Upload File</label>
+  <input type="file" id="FileUpload1" class="show-for-sr">
+  </div>
+
+    <button class="w3-button w3-black w3-display-left btndrop" onclick="plusDivs(-1); return false;">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right btndrop" onclick="plusDivs(1); return false;">&#10095;</button>
+  </div>
+<br>
+  <a class="btn btn-secondary btn-sm" style="margin-left: 160px;" onclick="$('.closex').hide();$('.post').show();">Done</a>
+<div class="thumbbox">
+
+  <div class="nail">
+<img class="nailimg" src="/assets/eventHouse5.jpg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+ <div class="nail">
+<img class="nailimg" src="/assets/eventHouse2.jpeg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+<div class="nail">
+<img class="nailimg" src="/assets/eventHouse4.jpg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+<div class="nail">
+<img class="nailimg" src="/assets/eventHouse5.jpg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+<div class="nail">
+<img class="nailimg" src="/assets/eventHouse2.jpeg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+<div class="nail">
+<img class="nailimg" src="/assets/eventHouse4.jpg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+
+</div><!--- thumbnail box -->
+
+
+</div> <!--- End Photo Uploader --->
+
+</form>
+
+<!--- EDIT EVENTS --->
+<div class="edit closex" style="display: none;">
+<br>Your Balance: ${{ bal }}<br><font style="font-size: 11px">
+  <a onclick="$('.closex').hide();$('.editbank').show();">Edit Bank Account</a>
+</font><br>
+<br>Your Events:<br><font style="font-size: 11px">
+
+<a onclick="$('.closex').hide();$('.editpost1').show();">Joe's Superbowl Party - Friday, April 4th</a><br>
+<a href="javascript:;" onclick="$('.closex').hide();$('.editpost2').show();">Taylor Swift Halloween - Friday, April 4th</a><br>
+<a href="javascript:;" onclick="$('.closex').hide();$('.editpost3').show();">Black Tie Christmas Party - Saturday, April 5th</a><br>
+<a href="javascript:;">Corporate Mixer - Saturday, April 5th</a><br>
+<a href="javascript:;">Business Mixer - Saturday, April 5th</a><br>
+<a href="javascript:;">Birthday Bash - Saturday, April 5th</a><br>
+</font>
+</div>
+
+<!--- EDIT BANK --->
+<div class="editbank closex" style="display: none;">
+  <br>
+  Account #<br>
+  <input class="box" placeholder="Saved# 123">
+  <br>
+  Routing #<br>
+  <input class="box" placeholder="Saved# 123">
+  <br>
+  <b>Balance:</b> ${{ bal }}<br>
+  <a class="cashbtn btn btn-success btn-sm" onclick="$('.closex').hide();$('.open1').show();alert('Check your bank account for funds in 3-5 days!\n... and dont forget to pay your income taxes.');">Cash Out</a>
+
+
+</div>
+<!--- EDIT POST 1 --->
+<div class="editpost1 closex" style="display: none;">
+
+<br>
+    <div class="box glist" onclick="$('.closex').hide();$('.guestlist').show();" >Guestlist ::</div>
+
+    <input class="box" placeholder=" Event Header" value="Joe's Superbowl Party">
+    <br>
+
+    <input class="box" placeholder=" $ Ticket Price" value="25">
+    <br>
+    <input class="box openz1" placeholder=" DJ/Entertainer Name" value="Diplo" >
+
+
+
+    <div class="" style="width:190px;  margin-left: 49px;margin-bottom: 10px;">
+    <select class="select">
+      <option value="drinks"> Drinks ?</option>
+      <option value="catered"> - Catered</option>
+      <option value="byob" selected> - BYOB</option>
+    </select>
+  </div>
+
+  <div class="" style="width:190px;  margin-left: 49px;margin-bottom: 10px;">
+  <select class="select" disabled>
+    <option value="location"> Location</option>
+    <option value="losangeles" selected> - Los Angeles</option>
+    <option value="sanfransisco"> - San Fransisco</option>
+    <option value="siliconvalley"> - Silicon Valley</option>
+  </select>
+  </div>
+
+
+
+    <hr style="margin-top: 0px; margin-bottom: 10px;">
+    <input class="box" placeholder=" Full Address (Hidden)" value="123 Street" disabled>
+    <br>
+
+    <div class="box photos" onclick="$('.closex').hide();$('.photoeditor').show();" style="padding-top: 7px;font-size: 12px; margin-top: -3px;margin-bottom: 0px ;margin-left: 49px; height: 35px;width:190px;">
+  - Edit Photos
+    </div>
+
+    <br>
+
+    <textarea class="box area" placeholder="Event Details" style="margin: 0 auto; width:190px;">All the great details of this event!
+    </textarea>
+    <br>
+
+  <a class="upbtn btn btn-secondary btn-sm" onclick="$('.closex').hide();$('.open1').show();alert('Update successful!');resetPostForm();">Update</a>
+  <a class="delbtn btn btn-danger btn-sm" onclick="$('.closex').hide();$('.open1').show();alert('Event deleted!');resetPostForm();">Delete</a>
+
+</div>
+
+<!--- GUESTLIST --->
+
+<div class="guestlist closex" style="display: none">
+<font onclick="$('.closex').hide();$('.editpost1').show();" class="greyhov" style="margin-right: 110px;">&larr; Back</font>
+<hr style="margin: 5px; margin-bottom: 10px;"><font style="font-size: 10px">
+
+&#8226; (Name on Card)
+- Email@email.com
+<br>
+&#8226; (Name on Card)
+- Email@email.com
+<br>
+&#8226; (Name on Card)
+- Email@email.com
+
+</font>
+<br>
+<font style="display: none" color="red">
+x Report Email
+</font>
+</div>
+
+<!--- PHOTO EDITOR [EDIT] --->
+<div class="photoeditor closex" style="display: none;">
+<br>
+  <h4 class="w3-center">Edit Photos</h4>
+
+  <div class="w3-content w3-display-container">
+    <div class="myEdits uslide showfirst" style="background-image: url('/assets/pgHouse.png')"> No Images</div>
+  <!---  Upload Images in this format WITH "showfirst" CLASS on FIRST IMAGE - - -->
+         <div class="myEdits uslide" style="background-image: url('/assets/eventHouse5.jpg')"></div>
+         <div class="myEdits uslide" style="background-image: url('/assets/eventHouse2.jpeg')"></div>
+         <div class="myEdits uslide" style="background-image: url('/assets/eventHouse4.jpg')"></div>
+         <div class="myEdits uslide" style="background-image: url('/assets/eventHouse6.jpg')"></div>
+
+
+    <div style="height: 38px; width: 100%; background-color: rgba(55,55,55,0.5);">
+      <label for="FileUpload2" class="button">Upload File</label>
+  <input type="file" id="FileUpload2" class="show-for-sr">
+  </div>
+
+    <button class="w3-button w3-black w3-display-left btndrop" onclick="plusDivs2(-1); return false;">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right btndrop" onclick="plusDivs2(1); return false;">&#10095;</button>
+  </div>
+<br>
+  <a class="btn btn-secondary btn-sm" style="margin-left: 160px;" onclick="$('.closex').hide();$('.editpost1').show();">Done</a>
+<div class="thumbbox">
+
+  <div class="nail">
+<img class="nailimg" src="/assets/eventHouse5.jpg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+ <div class="nail">
+<img class="nailimg" src="/assets/eventHouse2.jpeg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+<div class="nail">
+<img class="nailimg" src="/assets/eventHouse4.jpg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+<div class="nail">
+<img class="nailimg" src="/assets/eventHouse5.jpg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+<div class="nail">
+<img class="nailimg" src="/assets/eventHouse2.jpeg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+<div class="nail">
+<img class="nailimg" src="/assets/eventHouse4.jpg">
+<div class="imglay"><font class="redx">X</font></div>
+</div>
+
+</div><!--- thumbnail box -->
+
+
+</div> <!--- End Photo Uploader --->
+
+
+</div><!--- content --->
+
+</div><!--- liner -->
+</div> <!--overflow catch -->
+</div> <!--- panel -->

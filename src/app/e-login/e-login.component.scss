@@ -1,0 +1,57 @@
+/*    MAIN PANAL WITH CENTER CONTENT        */
+.panel {
+position: relative;
+margin-top: 25px;
+margin-left: 10%;
+margin-right: 10%;
+height: 76vh;
+background-color: rgba(0,0,0,.5);
+}
+
+  .catchoverflow {
+    position: absolute;
+    overflow: hidden;
+  width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.0);
+}
+
+.signin {
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  max-width: 300px;
+  min-width: 255px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,.0);
+}
+
+.ltabs {
+  height: calc(100% - 50px);
+}
+
+.notebox {
+  background-color: rgba(255,255,255,.2);
+  padding: 8px 10px;
+  height: 39px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.box {
+  color: #fff;
+  background-color: rgba(0,0,0,0);
+}
+
+.box::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.box:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+}
+
+.box::-ms-input-placeholder { /* Microsoft Edge */
+   color: white;
+}

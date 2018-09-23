@@ -1,0 +1,61 @@
+<div class="panel w3-card-4">
+
+<div class="catchoverflow">
+  <div class="signin w3-container">
+
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button tablink w3-red" onclick="openLtab(event,'LoginE')">Login</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLtab(event,'RegisterE')">Register</button>
+    </div>
+
+    <div id="LoginE" class="w3-container w3-animate-opacity w3-border ltabs">
+
+      <h3>Login</h3><br>
+      <p>Email</p>
+      <input type="text" class="box" placeholder="Email" aria-describedby="exampleHelpText">
+      <p>Password</p>
+      <input type="password" class="box" placeholder="Password" aria-describedby="exampleHelpText">
+      <div class="notebox">
+        <!--- PASSWORD INCORRECT NOTIFY --->
+        <p style="display: none">
+          &#8226; Password is incorrect!
+        </p>
+
+        <!--- EMAIL NOT REGISTERED NOTIFY --->
+        <p style="display: none">
+          &#8226; That email is not registered.
+        </p>
+
+        <!--- RESET PASSWORD --->
+        <div class="quickreset" onclick="$('#resetpassid').show();">[Reset Password]</div>
+      </div>
+      <a class="button float-right" id="loginid" routerLink="" onclick="">Login</a>
+
+    </div>
+    <div id="RegisterE" class="w3-container w3-animate-opacity w3-border ltabs" style="display:none">
+
+      <h4>Register</h4>
+      <p>Email</p>
+      <input type="text" class="box" placeholder="Email" aria-describedby="exampleHelpText">
+      <p>Password</p>
+      <input type="password" class="box" placeholder="Password" aria-describedby="exampleHelpText">
+      <input type="password" class="box" placeholder="Password Again" aria-describedby="exampleHelpText">
+      <div class="notebox">
+        <!--- UNMATCHING PASSWORDS NOTIFY --->
+        <p style="display: none">
+          &#8226; Passwords do not match!
+        </p>
+
+        <!--- UNAVAILABLE EMAIL NOTIFY --->
+        <p style="display: none">
+          &#8226; That email is registered.
+        </p>
+
+      </div>
+      <a class="button float-right" id="regid" routerLink="" onclick="">Register</a>
+
+    </div>
+
+</div>
+</div>
+</div>

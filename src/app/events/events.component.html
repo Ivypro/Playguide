@@ -1,0 +1,86 @@
+<div class="panel w3-card-4 fadein" id="panelid" style="">
+
+        <!--- ABSOLUTE ITEM --->
+          <div class="aitem1 w3-hide-small">
+        Make up to <font style="color: #c8e1c8;">$50,000</font> hosting entertainment-ready <font style="color: #e3e3a5;">social events</font>.
+          </div>
+          <div class="aitem2 w3-hide-small" style="display: none">
+        Welcome to Playguide.com where you can attend venue & home events.
+          </div>
+        <!--- END ABSOLUTE ITEM --->
+        <div class="catchoverflow">
+        <div class="deck">
+          <!--- BEGIN DECK --->
+
+            <div class="btn-group btn-group-sm w3-hide-small" style="display: none" role="group" aria-label="...">
+              <button type="button" class="btn btn-secondary">The Weekend</button>
+              <button type="button" class="btn btn-secondary">Mid Week</button>
+            </div>
+
+            <div class="aformitem2 w3-card-2 " style="">
+            <a class="small alert button staffbtn" style=""  [routerLink]='["/hlogin"]' onclick="hostFunction()" >Hosting</a>
+            </div>
+            <div class="aformitem3 w3-card-2">
+            <a class="small button staffbtn" style="display: none" routerLink="elogin" onclick="staffFunction()" href="#0">Entertaining</a>
+            </div>
+            <div class="aformitem4 w3-card-2">
+            <a class="small secondary button staffbtn" style="display: none" routerLink="slogin" onclick="securityFunction()" href="#0">Security</a>
+            </div>
+
+
+
+              <!--- SHOW NEARBY 25 MILES CONCEPT --->
+        <div class="aformitem w3-card-4" style="display: none"> <!--- HIDDEN --->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Nearby
+              </label>
+            </div>
+        </div>
+
+        <!--- END DECK --->
+        </div>
+
+        <div class="scannerpanel">
+<!--- SCANNER PANEL --->
+<app-nailhead></app-nailhead>
+
+<!--- FLIP FLIP FLIP FLIP FLIP FLIP HOUSE --->
+<div *ngIf="flipList" class="fliphouse fadein" style="position: relative; height: 100%; ">
+  <!--Buttons Div and Button -->
+  <div class="flipbtn" style="position: absolute; width: 52.5px; height: 27px; top: -39px; right: 4.5px; background-color: rgba(0,0,0,.8);">
+    <a class="tiny button" (click)="closeFlip()" style="margin-left: 0px; margin-top: 0px;"><font class="w3-hide-medium w3-hide-large">I N F O</font><font class="w3-hide-small"> CLOSE  </font></a>
+  </div>
+  <!-- End Div + Buttons --->
+<!-- City List --->
+    <div class="infoflip" style=" margin-right: -5px; ">
+    <app-citylist></app-citylist>
+    </div>
+    <!--- END CITY LIST --->
+</div><!--- END FLIP FLIP FLIP FLIP FLIP FLIP FLIP --->
+
+
+<!--- FRONT INFO --->
+    <div class="info fadein" id="infoid" style="">
+        <app-scanner></app-scanner>
+    </div>
+<!-- End FRONT INFO --->
+
+
+
+</div><!--- END SCANNER PANEL --->
+
+<div class="viewer w3-hide-small">
+<!--- BIG SCREEN VIEWER --->
+
+<app-citylist></app-citylist>
+
+<!--- END VIEWER --->
+</div>
+
+
+
+
+</div> <!-- OVERFLOW CATCHER -->
+</div> <!-- PANEL -->

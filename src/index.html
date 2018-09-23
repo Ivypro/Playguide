@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pg7</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation.min.css" integrity="sha256-iJQ8dZac/jUYHxiEnZJsyVpKcdq2sQvdA7t02QFmp30= sha384-SplqNBo/0ZlvSdwrP/riIPDozO5ck8+yIm++KVqyMAC53S6m3BaV+2OLpi7ULOOh sha512-ho6hK4sAWdCeqopNZWNy1d9Ok2hzfTLQLcGSr8ZlRzDzh6tNHkVoqSl6wgLsqls3yazwiG9H9dBCtSfPuiLRCQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+</head>
+<body style="-webkit-font-smoothing: subpixel-antialiased; background-color: #222;">
+  <base href="/">
+  <app-root></app-root>
+
+
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+  <script type="text/javascript">
+      $(document).ready(function () {
+
+          $("#sidebar").mCustomScrollbar({
+              theme: "minimal"
+          });
+
+          $('#sidebarCollapse').on('click', function () {
+              $('#sidebar, #content').toggleClass('active');
+              $('.collapse.in').toggleClass('in');
+              $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+          });
+
+          $('.closesmall').on('click', function () {
+              $('#sidebar, #content').toggleClass('active');
+              $('.collapse.in').toggleClass('in');
+              $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+          });
+
+      });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+  function scrollNailL() {
+      document.getElementById('nailscroller').scrollBy(-42, 0);
+  }
+  function scrollNailR() {
+      document.getElementById('nailscroller').scrollBy(42, 0);
+  }
+
+  function enter() {
+      document.getElementById('panelpopid').style.display = "none";
+      document.getElementById('panelid').style.display = "";
+  }
+
+  function showEvents() {
+    document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
+}
+
+function enterOnTimeOut(ms){
+    showEvents();
+    setTimeout(function(){  document.getElementById('panelid').style.display = ""; }, ms);
+  }
+
+  function closeTicket() {
+      document.getElementById('ticketid').style.display = "none";
+  }
+  function openTicket() {
+      document.getElementById('ticketid').style.display = "";
+  }
+  function closeTone() {
+    var x = document.getElementsByClassName("tip1");
+    x[0].style.display = "none";
+}
+function closeTtwo() {
+  var x = document.getElementsByClassName("tip2");
+  x[0].style.display = "none";
+}
+function closeTthree() {
+  var x = document.getElementsByClassName("tip3");
+  x[0].style.display = "none";
+}
+function closeTfour() {
+  var x = document.getElementsByClassName("tip4");
+  x[0].style.display = "none";
+}
+function resetPostForm() {
+    document.getElementById("postformid").reset();
+}
+// function changeJavascript(){
+    // document.getElementById( "a" ).setAttribute( "onClick", "javascript: Boo();" );
+// }
+
+  </script>
+
+<!-- - JQUERY - --->
+<!--- hide dash --->
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#panelid').css('display', 'none');
+});
+
+</script>
+
+
+
+
+<!-- LOGIN TABS -->
+  <script>
+function openLtab(evt, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("ltabs");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+
+
+</body>
+
+<!--- Vanilla Javascript HIDE/SHOW -->
+<script type="text/javascript">
+function toggle(className, displayState){
+    var elements = document.getElementsByClassName(className)
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = displayState;
+    }
+}
+
+
+</script>
+
+<!--- PHOTO UPLOADER SLIDER [ALPHA 1 POST] --->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+<!--- PHOTO UPLOADER SLIDER [ALPHA 2 EDIT] --->
+<script>
+var slideIndex2 = 1;
+showDivs2(slideIndex2);
+
+function plusDivs2(n) {
+  showDivs2(slideIndex2 += n);
+}
+
+function showDivs2(n) {
+  var i;
+  var x = document.getElementsByClassName("myEdits");
+  if (n > x.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex2-1].style.display = "block";
+}
+</script>
+
+<!--- ADVANCED+ HOMEPAGE SLIDER [BETA 1 SYNC] --->
+
+
+
+<!--- [E] Component event page slider --->
+
+<script>
+var sIndex2 = 1;
+showDiv2(sIndex2);
+
+function plusDiv2(n) {
+  showDiv2(sIndex2 += n);
+}
+
+function currentDiv2(n) {
+  showDiv2(slideIndex = n);
+}
+
+function showDiv2(n) {
+  var i;
+  var x = document.getElementsByClassName("myPhotos");
+  var dots = document.getElementsByClassName("thumb");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" sel", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " sel";
+}
+</script>
+
+<!--- HOMEPAGE search INPUT ALERT (SIDEBAR) -->
+<script type="text/javascript">
+
+document.getElementById('sideinput').onkeypress = function(e){
+  if (!e) e = window.event;
+  if (e.keyCode == '13'){
+    alert('New cities will be coming soon!');
+    return false;
+  }
+}
+
+</script>
+
+<!-- Copy to Clipboard Share BOX -->
+<script>
+function shareFunction() {
+  var copyText = document.getElementById("dyShareHTML");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Copied to clipboard: " + copyText.value);
+}
+</script>
+
+<!--- BACKGROUND SHIFTING FUNCTIONS -->
+<script type="text/javascript">
+function loginFunction() {
+    document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
+}
+
+function enterOnTimeOut(ms){
+    loginFunction();
+    setTimeout(function(){  document.getElementById('panelid').style.display = ""; }, ms);
+  }
+function hostFunction() {
+    document.getElementById('content').style.backgroundImage = "url('assets/pgBack44.jpg')";
+}
+function staffFunction() {
+    document.getElementById('content').style.backgroundImage = "url('assets/pgBack11.jpg')";
+}
+function securityFunction() {
+    document.getElementById('content').style.backgroundImage = "url('assets/pgBack13.jpg')";
+}
+function blackFunction() {
+    document.getElementById('content').style.backgroundImage = "url('assets/blackbg.png')";
+}
+
+function styleFunction() {
+$('.navbar').css('background', 'rgba(0,0,50,1)');
+$(".navbar-brand").attr("onclick","style2Function()");
+}
+
+function style2Function() {
+$('.navbar').css('background', 'rgba(0,75,0,1)');
+$(".navbar-brand").attr("onclick","style3Function()");
+}
+
+function style3Function() {
+$('.navbar').css('background', 'rgba(100,0,0,1)');
+$(".navbar-brand").attr("onclick","styleFunction()");
+}
+
+</script>
+</html>

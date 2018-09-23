@@ -1,0 +1,36 @@
+<div class="head w3-card-2">
+  <div class="flexhead">
+
+
+
+    <div  class="leftnail" (click)="this.dataSer.nailArrow(-1)" onclick="scrollNailL()" >
+      <div class="uptri"></div>
+    </div>
+
+
+      <div id="nailscroller" class="nailflex"  *ngIf="!this.dataSer.photoes.length==0">
+       <!-- to loop through photoes -->
+        <div class="nail"  tabindex="-1" *ngFor="let img of this.dataSer.photoes; let i = index" (click)="currentNailDiv(i);">
+          <img class="nailimg" src={{img}}>
+          <div class="imglay nailanchor" [ngClass]=" {'w3-light-nail': i==this.dataSer.events.indexOf(this.dataSer.selectedEvent)}"></div>
+        </div>
+
+        <div class="nailspacer"></div>
+      </div>
+
+
+      <div *ngIf="this.dataSer.photoes.length==0" class="nailflex">
+          <div class="no-e-nail"></div>
+        </div>
+
+      <div class="rightnail" onclick="scrollNailR()" (click)="this.dataSer.nailArrow(1)">
+        <div class="downtri"></div>
+      </div>
+      <div class="rightlist w3-hide-medium w3-hide-large">
+        <a class="tiny button" (click)="openFlip()" style="margin-left: 4px; margin-top: 6px;" >L I S T</a>
+      </div>
+
+
+
+  </div><!-- End Flexhead -->
+</div><!-- End Head -->

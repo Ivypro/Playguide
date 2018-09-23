@@ -1,0 +1,40 @@
+<div class="infobuttons" *ngIf="this.dataSer.photoes.length > 0">
+  <!--- PURCHSE TICKET BUTTON logged -OUT-  -->
+  <a class="button"  onclick="$('#quickloginid').show();" style="color: white; position: relative; z-index: 1001; ">Purchase
+    <font class="w3-hide-small">Event</font> Tickets</a>
+  <!--- once LOGGED -IN- SHOW -->
+
+  <!--- END PURCHSE TICKET BUTTON this.dataSer.photoes.length ==0-->
+
+
+
+
+  <div class="slidebtnL"  (click)="this.dataSer.changePhotoInScanner(-1)">
+  </div>
+
+  <i class="fa fa-camera mid-cam" aria-hidden="true"></i>
+
+  <div class="slidebtnR"  (click)="this.dataSer.changePhotoInScanner(1)">
+  </div>
+
+</div>
+<div class="infobuttons" *ngIf="this.dataSer.photoes.length==0">
+    <!--- PURCHSE TICKET BUTTON logged -OUT-  -->
+    <a class="button btn-disable"  style="color: silver; position: relative; z-index: 1001;">Purchase
+      <font class="w3-hide-small">Event</font> Tickets</a>
+    <!--- once LOGGED -IN- SHOW -->
+
+    <!--- END PURCHSE TICKET BUTTON this.dataSer.photoes.length ==0-->
+
+
+
+
+    <div class="slidebtnL btn-disable">
+    </div>
+
+    <i class="fa fa-camera mid-cam" aria-hidden="true"></i>
+
+    <div class="slidebtnR btn-disable">
+    </div>
+
+  </div>

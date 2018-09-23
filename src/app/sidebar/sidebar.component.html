@@ -1,0 +1,43 @@
+<!-- Sidebar  -->
+<nav id="sidebar">
+
+
+
+  <div class="sidebar-header">
+      <h3></h3>
+  </div>
+  <form>
+<div class="form-group">
+ <label style="float: left;
+  margin-left: 10px;">Find Events</label>
+
+  <input id="sideinput" class="form-control box" placeholder="Your City..." />
+
+
+  <small id="emailHelp" class="form-text text-muted">Cities will show automatically.</small>
+</div></form>
+
+<div class="citylist">
+  <!--- DYNAMIC CITY LIST --->
+
+      <div class="spacer"></div>
+    <a [routerLink]='["event/LosAngeles"]' routerLinkActive="sg-activatedLink" onclick="loginFunction();enter();">
+      <div class="cityitem closesmall w3-card-4 w3-hide-medium w3-hide-large">Los Angeles</div>
+      <div class="cityitem w3-card-4 w3-hide-small">Los Angeles</div>
+    </a>
+    <div class="spacer"></div>
+    <a [routerLink]='["event/SanFrancisco"]' routerLinkActive="sg-activatedLink" onclick="loginFunction();enter();">
+      <div class="cityitem closesmall w3-card-4 w3-hide-medium w3-hide-large">San Fransisco</div>
+      <div class="cityitem w3-card-4 w3-hide-small">San Francisco</div>
+    </a>
+
+    <div class="spacer"></div>
+    <a [routerLink]='["event/SiliconValley"]' routerLinkActive="sg-activatedLink" onclick="loginFunction();enter();">
+      <div class="cityitem closesmall w3-card-4 w3-hide-medium w3-hide-large">Silicon Valley</div>
+      <div class="cityitem w3-card-4 w3-hide-small">Silicon Valley</div>
+    </a>
+
+
+    <!--- END CITY LIST --->
+</div>
+</nav>
