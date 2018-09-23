@@ -75,6 +75,7 @@ height: 25px;
 width: 450px;
 border-radius: 4px;
 background-color: rgba(0,0,0,.35);
+cursor: default;
 }
 
 .aitem2 {
@@ -85,14 +86,20 @@ background-color: rgba(0,0,0,.35);
   position: absolute;
   color: #fff;
 top: -35px;
-left: 50px;
+left: 505px;
+// right: 10px;
 text-align: center;
 padding: 1px;
 height: 25px;
-width: 530px;
-background-color: rgba(50,50,50,.0);
+width: 130px;
+border-radius: 4px;
+background-color: rgba(0,0,0,.35);
 }
 
+.aitem2:hover {
+  background-color: rgba(100,100,100,.35);
+  cursor: pointer;
+}
 
 /*    MAIN PANAL TOP FOR OPTIONS        */
 .deck {

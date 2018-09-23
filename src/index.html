@@ -63,25 +63,27 @@
 
 
   <script type="text/javascript">
+
+
+ function enterOnTimeOut(ms){
+     showEvents();
+     setTimeout(function(){  document.getElementById('panelid').style.display = ""; }, ms);
+   }
+
+   function showEvents() {
+     document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
+  }
+
+   function enter() {
+       document.getElementById('panelpopid').style.display = "none";
+       document.getElementById('panelid').style.display = "";
+   }
+
   function scrollNailL() {
       document.getElementById('nailscroller').scrollBy(-42, 0);
   }
   function scrollNailR() {
       document.getElementById('nailscroller').scrollBy(42, 0);
-  }
-
-  function enter() {
-      document.getElementById('panelpopid').style.display = "none";
-      document.getElementById('panelid').style.display = "";
-  }
-
-  function showEvents() {
-    document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
-}
-
-function enterOnTimeOut(ms){
-    showEvents();
-    setTimeout(function(){  document.getElementById('panelid').style.display = ""; }, ms);
   }
 
   function closeTicket() {
@@ -267,10 +269,10 @@ function loginFunction() {
     document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
 }
 
-function enterOnTimeOut(ms){
-    loginFunction();
-    setTimeout(function(){  document.getElementById('panelid').style.display = ""; }, ms);
-  }
+// function enterOnTimeOut(ms){
+    // loginFunction();
+    // setTimeout(function(){  document.getElementById('panelid').style.display = ""; }, ms);
+  // }
 function hostFunction() {
     document.getElementById('content').style.backgroundImage = "url('assets/pgBack44.jpg')";
 }
