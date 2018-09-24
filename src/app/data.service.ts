@@ -20,6 +20,7 @@ export class DataService {
   //===============to get data once only==============
   getEventsPosts(location) {
    this.http.get('https://my-json-server.typicode.com/ivypro/playguide-angular/posts').subscribe(
+     // this.http.get('http://localhost:3000/posts').subscribe(
     // this.http.get("/assets/db.json").subscribe(
       (res: any) => {
         this.events = [];
