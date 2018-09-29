@@ -13,7 +13,7 @@
 <p >
 {{this.dataSer.selectedEvent?.heading||this.dataSer.events[0]?.heading}}<br>
 Location: {{this.dataSer.selectedEvent?.location||this.dataSer.events[0]?.location}}<br>
-Date & Time: {{(this.dataSer.selectedEvent?.date ? this.dataSer.selectedEvent?.date  :this.dataSer.events[0]?.date)|date:" MMMM dd"  }}{{'th 9pm'}}<br><br>
+Date & Time: {{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:" MMMM dd"}}<sup>{{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:"dd"|dateSuffix}}</sup>{{' 9pm'}}<br><br>
 {{this.dataSer.selectedEvent?.details||this.dataSer.events[0]?.details}}
 <br><br>Entertainment: {{this.dataSer.selectedEvent?.entertainment||this.dataSer.events[0]?.entertainment}}<br>
 Drinks: {{this.dataSer.selectedEvent?.drinks||this.dataSer.events[0]?.drinks}}

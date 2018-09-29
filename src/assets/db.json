@@ -4,7 +4,7 @@
     "userId": 1,
     "id": 1,
     "heading": "Joes Superbowl Party",
-    "date": "04-05-2018",
+    "date": "04-05-2019",
     "entertainment": "Diplo",
     "capacity": "250",
     "drinks": "BYOB",
@@ -20,7 +20,7 @@
     "userId": 1,
     "id": 2,
     "heading": "Taylor Swift Halloween",
-    "date": "04-05-2018",
+    "date": "04-10-2019",
     "entertainment": "Taylor Swift",
     "capacity": "300",
     "drinks": "BYOB",
@@ -36,7 +36,7 @@
     "userId": 1,
     "id": 3,
     "heading": "Black Tie Christmas",
-    "date": "04-05-2018",
+    "date": "08-23-2018",
     "entertainment": "Drake",
     "capacity": "350",
     "drinks": "Catered",
@@ -52,7 +52,7 @@
   "userId": 1,
   "id": 4,
   "heading": "Corporate Mixer",
-  "date": "04-05-2018",
+  "date": "04-06-2019",
   "entertainment": "",
   "capacity": "230",
   "drinks": "Catered",
@@ -68,7 +68,7 @@
 "userId": 1,
 "id": 5,
 "heading": "Business Mixer",
-"date": "04-05-2018",
+"date": "04-06-2019",
 "entertainment": "",
 "capacity": "310",
 "drinks": "BYOB",
@@ -127,7 +127,76 @@
 "images": ["assets/eventHouse32.jpg", "assets/pgBack7.jpg"],
 "image": "assets/eventHouse32.jpg",
 "image2": "assets/pgBack7.jpg"
- }
+ },
+
+ {
+  "userId": 1,
+  "id": 9,
+  "heading": "Corporate Mixer 1",
+  "date": "09-25-2018",
+  "entertainment": "",
+  "capacity": "230",
+  "drinks": "Catered",
+  "price": "40",
+  "address": "123 Corp Ln. Los Angeles, CA",
+  "location": "Los Angeles",
+  "details": "We are having a corperate mixer come join us! ",
+  "images": ["assets/eventHouse6.jpg", "assets/pgBack7.jpg"],
+  "image": "assets/eventHouse6.jpg",
+  "image2": "assets/pgBack7.jpg"
+},
+{
+"userId": 1,
+"id": 10,
+"heading": "Business Mixer 2",
+"date": "10-5-2019",
+"entertainment": "",
+"capacity": "310",
+"drinks": "BYOB",
+"price": "35",
+"address": "123 Biz Ln. Los Angeles, CA",
+"location": "Los Angeles",
+"details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. ",
+"images": ["assets/eventHouse7.jpeg", "assets/pgBack7.jpg"],
+"image": "assets/eventHouse7.jpeg",
+"image2": "assets/pgBack7.jpg"
+},
+{
+"userId": 1,
+"id": 11,
+"heading": "Birthday Bash 3",
+"date": "09-26-2018",
+"entertainment": "Local DJ",
+"capacity": "120",
+"drinks": "Catered",
+"price": "15",
+"address": "123 Bash St. Los Angeles, CA",
+"location": "Los Angeles",
+"details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. ",
+"images": ["assets/eventHouse1.jpeg", "assets/pgBack7.jpg"],
+"image": "assets/eventHouse1.jpeg",
+"image2": "assets/pgBack7.jpg"
+},
+{
+"userId": 1,
+"id": 12,
+"heading": "Friday Frisco Rager 4",
+"date": "10-03-2019",
+"entertainment": "Bassnectar",
+"capacity": "215",
+"drinks": "BYOB",
+"price": "30",
+"address": "123 Rager St. San Francisco, CA",
+"location": "Los Angeles",
+"details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. ",
+"images": ["assets/eventHouse31.jpg", "assets/pgBack7.jpg"],
+"image": "assets/eventHouse31.jpg",
+"image2": "assets/pgBack7.jpg"
+}
+
+
+
+
   ],
   "profile": {
     "name": "playguide"

@@ -29,7 +29,7 @@
         <!--- RESET PASSWORD --->
         <div class="quickreset" onclick="$('#resetpassid').show();">[Reset Password]</div>
       </div>
-      <a class="button float-right" id="loginid" routerLink="" onclick="">Login</a>
+      <a class="button float-right" id="loginid"  (click)="this.location.back()">Login</a>
 
     </div>
     <div id="RegisterE" class="w3-container w3-animate-opacity w3-border ltabs" style="display:none">
@@ -52,7 +52,7 @@
         </p>
 
       </div>
-      <a class="button float-right" id="regid" routerLink="" onclick="">Register</a>
+      <a class="button float-right" id="regid" (click)="this.location.back()">Register</a>
 
     </div>
 

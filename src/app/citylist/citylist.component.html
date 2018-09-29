@@ -20,11 +20,11 @@ POST THE<br>FIRST EVENT
 
 <div *ngFor="let event of this.dataSer.events;let i=index">
 
-    <div  class="bannerdate w3-card-2" *ngIf="this.showDemoEvents(event?.date,i)">
+    <div  class="bannerdate w3-card-2" *ngIf="this.showDemoEvents(this.dataSer.dateConverter(event?.date),i)">
         <font color="red">- Demo Events -</font>
     </div>
     <div  class="bannerdate w3-card-2" *ngIf="this.checkDate(event?.date,i)">
-        {{event?.date|date:"EEEE, MMM dd"}}<sup>{{event?.date|date:"dd"|dateSuffix}}</sup>
+        {{this.dataSer.dateConverter(event?.date)|date:"EEEE, MMM dd"}}<sup>{{this.dataSer.dateConverter(event?.date)|date:"dd"|dateSuffix}}</sup>
     </div>
 
   <div class="anchor banner w3-card-2 "  (click)="this.dataSer.selectedItem(event)" [ngClass]=" {'w4-city-2': i==this.dataSer.events.indexOf(this.dataSer.selectedEvent)}" >
