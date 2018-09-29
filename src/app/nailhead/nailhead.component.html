@@ -7,7 +7,7 @@
       <div class="uptri"></div>
     </div>
 
-
+<!--- If photos --->
       <div id="nailscroller" class="nailflex"  *ngIf="!this.dataSer.photoes.length==0">
        <!-- to loop through photoes -->
         <div class="nail"  tabindex="-1" *ngFor="let img of this.dataSer.photoes; let i = index" (click)="currentNailDiv(i);">
@@ -17,11 +17,12 @@
 
         <div class="nailspacer"></div>
       </div>
-
-
+<!--- if photos end --->
+<!--- if NO photos --->
       <div *ngIf="this.dataSer.photoes.length==0" class="nailflex">
           <div class="no-e-nail"></div>
         </div>
+<!--- if NO photos --->
 
       <div class="rightnail" onclick="scrollNailR()" (click)="this.dataSer.nailArrow(1)">
         <div class="downtri"></div>

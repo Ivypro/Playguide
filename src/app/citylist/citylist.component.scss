@@ -140,10 +140,21 @@ WHITE BG  35 35 35 .6   */
     background-color: rgba(255,255,255,.7);
     color: black;
   }
+  @media (max-width: 600px){
+    .w4-city-2 {
+    background-color: #f44336;
+    color: #fff;
+  }}
+
   .w4-city-2:hover {
     background-color: rgba(255,255,255,.8);
     color: black;
   }
+  @media (max-width: 600px){
+    .w4-city-2:hover {
+    background-color: #f44336;
+    color: #fff;
+  }}
 
   .w4-city {
     background-color: #f44336;
@@ -152,6 +163,7 @@ WHITE BG  35 35 35 .6   */
       background-color: #f44336;
     }
 
+// first event spacer
     .first-spacer {
       width: 100%;
       height: 27%;

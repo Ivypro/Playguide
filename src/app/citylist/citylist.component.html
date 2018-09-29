@@ -27,7 +27,7 @@ POST THE<br>FIRST EVENT
         {{this.dataSer.dateConverter(event?.date)|date:"EEEE, MMM dd"}}<sup>{{this.dataSer.dateConverter(event?.date)|date:"dd"|dateSuffix}}</sup>
     </div>
 
-  <div class="anchor banner w3-card-2 "  (click)="this.dataSer.selectedItem(event)" [ngClass]=" {'w4-city-2': i==this.dataSer.events.indexOf(this.dataSer.selectedEvent)}" >
+  <div class="anchor banner w3-card-2 "  (click)="this.dataSer.selectedItem(event);closeFlip()" [ngClass]=" {'w4-city-2': i==this.dataSer.events.indexOf(this.dataSer.selectedEvent)}" >
     <div class="bannerimg">
     <img src={{event.images[0]}} class="banimg"></div>
     <div class="banlayover w3-hide-medium w3-hide-large"></div>
