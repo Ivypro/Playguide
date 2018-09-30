@@ -178,6 +178,11 @@ background-color: rgba(0,0,0,.6);
 top: -18px;
   }}
 
+  @media (max-width:370px){
+    .cover-370 {
+      display: none;
+    }}
+
   #dyShareHTML {
     resize: none;
   }
