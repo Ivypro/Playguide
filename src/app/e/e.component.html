@@ -1,19 +1,22 @@
 <!-- <script onload="closeMobile()"></script>  // TRIGGERS TOO EARLY. -->
 
 <img src onerror="enter()" style="display: none;">  <!-- TRIGGERS AFTER POPUP LOAD --->
-<!--
-<img src *ngIf="mobile" onerror="$('#sidebar, #content').toggleClass('active');$('.collapse.in').toggleClass('in');$('a[aria-expanded=true]').attr('aria-expanded', 'false');" style="display: none;">  <!-- TRIGGERS AFTER POPUP LOAD --->
+
+<img src *ngIf="MobileScreen" onerror="closeBar();" style="display: none;">  <!-- TRIGGERS AFTER POPUP LOAD --->
 
 <div class="panelheader">
 <div class="fadein centerheader w3-hide-medium w3-hide-small">Purchase tickets to this <font class="chromeBold">private event</font> or <font class="chromeBold">fundraiser</font>.</div>
 </div>
 
 <div class="panel fadein w3-card-4">
-    <div *ngIf="!loader">
+    <div *ngIf="!loader" style="height: 100%;">
       <div class="fadein" *ngIf="post.id && post.id > 0; else dataNotFound">
-
         <div onclick="$('#sharemodalid').show();" class="a-item-share w3-hide-medium w3-hide-large">Share:<img class="s-image1" src="/assets/facebook.png"><img class="s-image2" src="/assets/twitter.png"></div>
+
+        <!--- Back Events -->
           <div onclick="" class="abackitem w3-card-4"><div class="earrow">&larr; </div> <div class="etag"> Events </div></div>
+          <!-- End Back Events -->
+
 <div class="catchoverflow">
 
         <div class="image w3-card-4">
@@ -99,10 +102,10 @@ Location
 {{post.location}}
 </div>
 
-<div class="line seg tit" style="width: 69px;">
+<div class="line seg tit" style="width: 63px;">
 Date
 </div>
-<div class="line seg" style="width: calc(100% - 69px);">
+<div class="line seg" style="width: calc(100% - 63px);">
 <font class="w3-hide-medium">9 PM | </font>{{post.date}}
 </div>
 
@@ -151,9 +154,13 @@ Price
     </div> <!-- NG IF found -->
       <ng-template #dataNotFound>
 
+<div style="width: 100%; height: 35%;"></div>
 
-        404 EVENT NOT FOUND
-
+<div style="text-align: center;">
+        <img src="assets/PlayguideBrand.png" width="200">
+        404&nbsp;EVENT&nbsp;NOT&nbsp;FOUND
+        <br>This event may have expired..
+</div>
 
       </ng-template>
     </div>

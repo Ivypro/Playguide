@@ -8,6 +8,7 @@
     background-size: cover;
     top: 0;
     right: 0;
+    overflow: hidden;
     padding-top: 50px;
     -webkit-transform: translate3d(0, 0, 0);
     -webkit-transition: translateZ(0);
@@ -196,4 +197,16 @@ top: -18px;
 
 .tog-btn-style-o {
   border-radius: 0px 0px 5px 0px;
+
+}
+
+.cover {
+  position: absolute;
+   z-index: 10;
+    left: 0px;
+     top: 0px;
+      width: 100vw;
+       height: 100vh;
+        color: white;
+         background: rgba(0,0,0,0.75);
 }
