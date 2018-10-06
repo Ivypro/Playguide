@@ -24,7 +24,7 @@ POST THE<br>FIRST EVENT
         <font color="red">- Demo Events -</font>
     </div>
     <div  class="bannerdate w3-card-2" *ngIf="this.checkDate(event?.date,i)">
-        {{this.dataSer.dateConverter(event?.date)|date:"EEEE, MMM dd"}}<sup>{{this.dataSer.dateConverter(event?.date)|date:"dd"|dateSuffix}}</sup>
+        {{this.dataSer.dateConverter(event?.date)|date:"EEEE, MMMM dd"}}<sup>{{this.dataSer.dateConverter(event?.date)|date:"dd"|dateSuffix}}</sup>
     </div>
 
   <div class="anchor banner w3-card-2 "  (click)="this.dataSer.selectedItem(event);closeFlip()" [ngClass]=" {'w4-city-2': i==this.dataSer.events.indexOf(this.dataSer.selectedEvent)}" >

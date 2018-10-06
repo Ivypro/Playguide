@@ -2,7 +2,7 @@
 <div class="myEvents showfirst" style="height: 100%;" >
 
 <div *ngIf="this.dataSer.photoes.length==0" class="uslide" style="padding-top: 90px; text-align: center;color:white">
-       <i class="fa fa-bell-slash" style="font-size: 2em; color: rgba(130,130,130,0.3);"></i>
+       <i class="fa fa-bell-slash hide" style="font-size: 2em; color: rgba(130,130,130,0.3);"></i>
 </div>
 
 <div *ngIf="this.dataSer.photoes.length >0" class="uslide"  [ngStyle]="{'background-image': 'url(' + this.dataSer?.currentImgUrl + ')'}">
