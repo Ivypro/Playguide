@@ -67,7 +67,7 @@
 {
 "userId": 1,
 "id": 5,
-"heading": "Business Mixer",
+"heading": "Business Mixer 3",
 "date": "04-06-2019",
 "entertainment": "",
 "capacity": "310",
@@ -83,12 +83,12 @@
 {
 "userId": 1,
 "id": 6,
-"heading": "Birthday Bash",
+"heading": "Birthday 2 Bash",
 "date": "04-06-2019",
 "entertainment": "Local DJ",
 "capacity": "120",
 "drinks": "Catered",
-"price": "15",
+"price": "0",
 "address": "123 Bash St. Los Angeles, CA",
 "location": "Los Angeles",
 "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. ",
