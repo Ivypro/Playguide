@@ -215,3 +215,8 @@ top: -18px;
         color: white;
          background: rgba(0,0,0,0.75);
 }
+
+// Firefox ONLY 1+ ALL //
+_:-moz-tree-row(hover), .box::placeholder {
+  color: black;
+}
