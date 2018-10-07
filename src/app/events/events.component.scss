@@ -83,11 +83,12 @@ cursor: default;
   -webkit-text-stroke-color: rgba(0,0,0,0.4);
   position: absolute;
   color: #fff;
+  font-size: 1.3em;
 top: -35px;
 left: 16px;
 text-align: center;
 padding-left: 0.5px;
-padding-top: 0.2px;
+padding-top: 0px;
 height: 25px;
 width: 28px;
 border: solid 1px grey;
@@ -99,6 +100,18 @@ cursor: pointer;
   color: black;
   border: solid 1px black;
   background-color: rgba(200,200,200,.35);
+}
+
+.x-fit {
+  position: relative;
+  top: -4.75px;
+  left: 0.42px;
+}
+
+//Safari ONLY
+_:default:not(:root:root), .x-fit {
+top: -5px;
+left: 0.2px;
 }
 
 /*    ADVERTISEMENT FOR HOSTING 50K+     */
@@ -302,5 +315,5 @@ background-color: rgba(0,0,0,.0);
 
 .enter-delay {
   visibility: hidden;
-  transition: visibility 5s 5s;
+  transition: visibility 5s linear 10s;
 }
