@@ -6,7 +6,7 @@
 </div>
 
 <div *ngIf="this.dataSer.photoes.length >0" class="uslide"  [ngStyle]="{'background-image': 'url(' + this.dataSer?.currentImgUrl + ')'}">
-<a routerLink="/e/{{this.dataSer.selectedEvent?.heading.split(' ').join('-')}}"><div class="lowrighticon"></div></a>
+<a routerLink="/e/{{this.dataSer.selectedEvent?.heading.split(' ').join('-')}}" onclick="soonHidden()"><div class="lowrighticon"></div></a>
 </div>
 <app-buttons></app-buttons>
   <div class="infodetails" *ngIf="this.dataSer.photoes.length >0">

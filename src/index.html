@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!--title>Playguide - Find a Party</title--->
-  <title>pgS :: N.C.</title>
+  <title>pgS-NC</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,6 +69,10 @@
             $('#sidebar, #content').toggleClass('active');
             $('.collapse.in').toggleClass('in');
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+  }
+
+  function soonHidden() {
+      $('.cityitemsoon').css('display', 'none');
   }
 
  function enterOnTimeOut(ms){
@@ -256,6 +260,7 @@ document.getElementById('sideinput').onkeypress = function(e){
   if (!e) e = window.event;
   if (e.keyCode == '13'){
     alert('New cities will be coming soon!');
+    $('input[name=sideinputname]').val("");
     return false;
   }
 }
