@@ -76,6 +76,31 @@ left: 20px;
 cursor: default;
 }
 
+.aitemX {
+  font-family: "Raleway", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: rgba(0,0,0,0.4);
+  position: absolute;
+  color: #fff;
+top: -35px;
+left: 16px;
+text-align: center;
+padding-left: 0.5px;
+padding-top: 0.2px;
+height: 25px;
+width: 28px;
+border: solid 1px grey;
+background-color: rgba(0,0,0,.35);
+cursor: pointer;
+}
+
+.aitemX:hover {
+  color: black;
+  border: solid 1px black;
+  background-color: rgba(200,200,200,.35);
+}
+
 /*    ADVERTISEMENT FOR HOSTING 50K+     */
 .aitem1 {
   font-family: "Raleway", sans-serif !important;
@@ -273,4 +298,9 @@ background-color: rgba(0,0,0,.0);
   left: 320px;
         cursor: default;
   background-color: rgba(255,255,255,.1);
+}
+
+.enter-delay {
+  visibility: hidden;
+  transition: visibility 5s 5s;
 }

@@ -107,3 +107,19 @@ ul {
     background-color: rgba(255,255,255,0.9) !important;
     color:#000;
   }
+
+  .cityitemsoon {
+    font-family: "Raleway", sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+    height: 332px;
+    width: 186px;
+    margin-left: 10px;
+    line-height: 1.68;
+    text-align: center;
+    padding-top: 3px;
+    padding-left: 3px;
+    transition: .1s;
+    cursor: default;
+    animation: fadein 2s;
+    background-color: rgba(25,25,25,.5);
+  }

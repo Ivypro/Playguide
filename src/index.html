@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>PgS-NC</title>
+  <title>PG - N.C.</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,6 +82,9 @@
    function enter() {
        document.getElementById('panelpopid').style.display = "none";
        document.getElementById('panelid').style.display = "";
+       $('.enter-act1').css('display', '');
+       $('.enter-act2').css('display', '');
+       $('.enter-delay').css('visibility', 'visible');
    }
 
   function scrollNailL() {
@@ -280,6 +283,7 @@ function loginFunction() {
   // }
 function hostFunction() {
     document.getElementById('content').style.backgroundImage = "url('assets/pgBack44.jpg')";
+    $('.cityitemsoon').css('display', 'none');
 }
 function staffFunction() {
     document.getElementById('content').style.backgroundImage = "url('assets/pgBack11.jpg')";
