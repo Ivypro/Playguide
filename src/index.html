@@ -304,16 +304,23 @@ function blackFunction() {
 function styleFunction() {
 $('.navbar').css('background', 'rgba(0,0,50,1)');
 $(".navbar-brand").attr("onclick","style2Function()");
+$('.enter-delay').css('display', 'none');
+$('#sidebar').css('background-color', 'rgba(75,75,75,1)');
+$('.panel').css({'margin-left': '6%', 'margin-right': '6%', 'margin-top': '5px', 'height': 'calc(76vh + 40px)'});
 }
 
 function style2Function() {
 $('.navbar').css('background', 'rgba(0,75,0,1)');
+$('#sidebar').css('background-color', 'rgba(100,100,100,1)');
 $(".navbar-brand").attr("onclick","style3Function()");
 }
 
 function style3Function() {
 $('.navbar').css('background', 'rgba(100,0,0,1)');
 $(".navbar-brand").attr("onclick","styleFunction()");
+$('.enter-delay').css('display', '');
+$('#sidebar').css('background-color', '#222');
+$('#panelid').css({'margin-left': '10%', 'margin-right': '10%', 'margin-top': '25px', 'height': '76vh'});
 }
 
 </script>

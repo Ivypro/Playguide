@@ -220,3 +220,13 @@ top: -18px;
 _:-moz-tree-row(hover), .box::placeholder {
   color: black;
 }
+
+
+  .hidden-601 {
+    visibility: visible;
+  }
+
+  @media (min-width:992px){
+    .hidden-992 {
+    visibility: hidden !important;
+    }}
