@@ -16,7 +16,7 @@ import { EComponent } from './e/e.component';
 const routes: Routes = [
   {
     path: '',
-    component: EventsComponent,
+    component: BlankComponent,
     pathMatch: 'full'
   },
    {

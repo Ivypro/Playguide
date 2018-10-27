@@ -1,4 +1,41 @@
-<div class="panel w3-card-4 fadein" id="panelid" style="">
+<div class="contain">
+
+<div class="loader">
+<img src="/assets/preload.svg">
+</div>
+
+<div class="material" style="display: none;">
+<div class="left-panel">
+<app-nailhead></app-nailhead>
+
+<div class="info fadein" id="infoid" style="overflow:scroll">
+    <app-scanner></app-scanner>
+</div>
+
+</div>
+<div class="right-panel">
+  ALL STUFF
+
+    <a onclick="hostFunction()" [routerLink]='["/hlogin"]'>Host</a>
+<a onclick="$('#panelid').toggleClass('block');$('.material').toggleClass('none');" a href="javascript:;">Panel</a>
+
+</div>
+</div>
+
+
+</div>
+<img src onerror="
+$('.loader').css('opacity', '1');
+setTimeout(function(){
+$('.loader').css('opacity', '0');
+}, 1250);
+setTimeout(function(){
+$('.material').css('display', 'block');
+}, 1850);
+">
+<!--- Prototype --->
+
+<div class="panel w3-card-4 fadein" id="panelid" style="display: none">
 
         <!--- ABSOLUTE ITEM --->
         <div class="aitem0 w3-hide-small">

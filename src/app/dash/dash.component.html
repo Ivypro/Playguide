@@ -2,13 +2,22 @@
 
 <div id="content" class="w3-grayscale-min" style="background-image: url('assets/pgBack7.jpg');">
 
+<!--- BACKGROUND SHIFT (No Lag) --->
+<div class="bg-black"></div>
+<div class="dash-background bg-sec not-ent not-host"></div>
+<div class="dash-background bg-ent not-host not-sec"></div>
+<div class="dash-background bg-host not-ent not-sec"></div>
+
+
+<!-- Mobile Fader -->
   <div class="w3-hide-medium w3-hide-large cover" style=" display: ;">
-  <span>Hi Safari</span><br><br><br>
+  <span>MOBILE FADER (VIEW SAFARI)</span><br><br><br>
       <div onclick="closeBar()" style="position: relative; top: -11px; left: 10px; cursor: pointer;">
     <i class="fa fa-bars"></i>
       </div>
   </div>
 
+<!---
       <div class="tognest">
         <button type="button" id="sidebarCollapse" class="hidden-992 btn btn-secondary tog-btn-style-o">
 
@@ -16,15 +25,16 @@
               <font style="margin-left: 1px;"> +</font>
             </span>
         </button>
-
-
-
           </div>
 
+          ---->
+
+
+<div class="dash-fader">
 
 <router-outlet></router-outlet>
 
-
+</div>
 <!--- START MODALS --->
 
 <!--- PURCHASE TICKET POPUP -->

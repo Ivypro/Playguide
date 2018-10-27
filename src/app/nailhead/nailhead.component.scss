@@ -4,7 +4,7 @@
       -webkit-user-select: none;
     overflow: hidden;
     white-space: nowrap;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.1);
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-transition: translateZ(0);
   -webkit-backface-visibility: hidden;
@@ -79,6 +79,7 @@ background-color: rgba(0,0,0,.6);
 */
 
 .nailimg {
+  vertical-align: top;
 object-fit: cover;
    height: 40px;
    max-width: 36px;

@@ -1,3 +1,54 @@
+.dash-background {
+position: absolute;
+top: 0px;
+left: 0%;
+right: 0%;
+height: 100vh;
+background-position: center;
+background-size: cover;
+transition: .3s;
+opacity: 1;
+display: none;
+}
+
+.bg-black {
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  right: 0%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  transition: .3s;
+  display: none;
+  background-image: url('/assets/blackbg.png');
+}
+
+.bg-host {
+  background-image: url('/assets/pgBack44.jpg');
+}
+
+.bg-ent {
+  background-image: url('/assets/pgBack11.jpg');
+}
+
+.bg-sec {
+  background-image: url('/assets/pgBack13.jpg');
+}
+
+
+.dash-fader {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+
+// PROTOTYPE // // // // // // // //
+
+
 
 #content {
     width: calc(100% - 250px);
@@ -40,6 +91,7 @@ left: 0%;
 right: 0%;
 height: calc(100vh - 50px);
 background-color: rgba(0,0,0,.6);
+z-index: 20;
 }
 
 .tmodalbox {

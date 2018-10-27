@@ -30,7 +30,7 @@
 }
 
 .infodetails {
-  height: 40%;
+  height: calc(100% - 255px);
   color: #e6e0c1;
   font-family: "Raleway", sans-serif !important;
   -webkit-font-smoothing: antialiased;
@@ -42,5 +42,5 @@ padding-left: 15px;
 padding-right: 15px;
 padding-top: 10px;
 padding-bottom: 15px;
-background-color: rgba(210,210,210,.0);
+background-color: rgba(0,0,0,.1);
 }
