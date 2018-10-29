@@ -4,26 +4,55 @@
 <img src="/assets/preload.svg">
 </div>
 
-<div class="material" style="display: none;">
+<div class="material fadein" style="display: none;">
 <div class="left-panel">
 <app-nailhead></app-nailhead>
 
-<div class="info fadein" id="infoid" style="overflow:scroll">
+<!--- FLIP  HOUSE --->
+<div *ngIf="flipList" class="fliphouse fadein" style="position: relative; height: 100%; ">
+  <!-- Button -->
+  <div class="flipbtn" style="position: absolute; width: 52.5px; height: 27px; top: -39px; right: 4.5px; background-color: rgba(0,0,0,.8);">
+    <a class="tiny button" (click)="closeFlip()" style="vertical-align: top; margin-left: 0px; margin-top: 0px; color: white;"><font class="w3-hide-medium w3-hide-large">I N F O</font><font class="w3-hide-small"> CLOSE  </font></a>
+  </div>
+<!-- City List --->
+    <div class="infoflip" style="font-size: 1rem; margin-right: -5px; ">
+    <app-citylist></app-citylist>
+    </div>
+</div><!--- END FLIP HOUSE --->
+
+<div class="info fadein" id="infoid" >
     <app-scanner></app-scanner>
 </div>
+<!--- right panel --->
+</div>
+<div class="right-panel w3-hide-small">
+
+  <img class="chev" src="/assets/downChev.png" width="35">
+
+  <div class="high-box">
+    <div class="x-pod" onclick="$('.chev').css('opacity', '0');$('.high-box').css('opacity', '0');setTimeout(function(){ $('.low-box').css('height', '100%'); }, 200);"><i class="fa fa-times xy-center"></i></div>
+    <div class="x-slab">
+    Make up to <font style="color: #c8e1c8;">$75,000</font> hosting <font style="color: #e3e3a5;">social events</font>.
+  </div>
+  <div class="x-button">
+    <a class="small alert button staffbtn" style=""  [routerLink]='["/hlogin"]' onclick="hostFunction()" >Hosting</a>
+</div>
+
+  </div>
+
+  <div class="low-box">
+    <div class="low-box-liner">
+    <app-citylist></app-citylist>
+  </div>
+  </div>
+
+<a onclick="$('#panelid').toggleClass('block');$('.material').toggleClass('none');" a href="javascript:;"></a>
 
 </div>
-<div class="right-panel">
-  ALL STUFF
-
-    <a onclick="hostFunction()" [routerLink]='["/hlogin"]'>Host</a>
-<a onclick="$('#panelid').toggleClass('block');$('.material').toggleClass('none');" a href="javascript:;">Panel</a>
-
-</div>
 </div>
 
 
-</div>
+</div><!--- end container --->
 <img src onerror="
 $('.loader').css('opacity', '1');
 setTimeout(function(){
