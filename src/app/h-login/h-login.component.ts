@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 declare var enterOnTimeOut:any, enter:any;
 
+declare var $:any
+
 @Component({
   selector: 'app-h-login',
   templateUrl: './h-login.component.html',
@@ -12,6 +14,12 @@ export class HLoginComponent implements OnInit {
 
   ngOnInit() {
     document.getElementById('panelpopid').style.display = "none";
+
+  }
+
+  testTs2() {
+    // document.getElementById('changeme').setAttribute("style", "color: green;");
+    $("#changeme").attr("style","color: green;");
 
   }
 

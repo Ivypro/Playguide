@@ -23,7 +23,7 @@ data:any=[];
         this.data= this.dataSer.getEventsPosts(params['location'])
         enter();
         enterOnTimeOut(500);
-        
+
       }
     })
   }

@@ -37,16 +37,16 @@ export class CitylistComponent implements OnInit {
 
     //Get 1 day in milliseconds
     var one_day=1000*60*60*24;
-  
+
     // Convert both dates to milliseconds
     var date1_ms = new Date().getTime();
     var date2_ms = new Date(date).getTime();
-  
+
     // Calculate the difference in milliseconds
     var difference_ms = date2_ms - date1_ms;
-      
+
     // Convert back to days and return
-    var days= Math.round(difference_ms/one_day); 
+    var days= Math.round(difference_ms/one_day);
 
     if(days > 90)
     this.demoEventsBar++;
