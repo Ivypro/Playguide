@@ -45,10 +45,10 @@
               theme: "minimal"
           });
 
-          $('#sidebarCollapse').on('click', function () {
-              $('#sidebar, #content').toggleClass('active');
-              $('.collapse.in').toggleClass('in');
-              $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+          $('.sidebar-button').on('click', function () {
+              $('#sidelayer1, #sidebar, #content').toggleClass('active');
+              // $('.collapse.in').toggleClass('in');
+              // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
           });
 
           $('.closesmall').on('click', function () {

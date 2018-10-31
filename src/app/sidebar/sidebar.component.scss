@@ -27,6 +27,11 @@
 
 #sidebar.active {
     margin-left: -250px;
+    // 190
+}
+
+#sidelayer1.active {
+    display: none;
 }
 
 
@@ -50,10 +55,11 @@
   width: 186px;
   margin-left: 10px;
   text-align: center;
+  border: solid 1px white;
   padding-top: 3px;
   padding-left: 3px;
   transition: .1s;
-  background-color: rgba(25,25,25,.7);
+  background-color: rgba(75,75,75,.7);
 }
 
 .cityitem:hover {
@@ -104,17 +110,22 @@ ul {
 
 
   .sg-activatedLink div{
-    background-color: rgba(255,255,255,0.9) !important;
-    color:#000;
+    background-color: rgba(255,255,255,0.35) !important;
+    color:#fff;
   }
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
 
   .cityitemsoon {
     font-family: "Raleway", sans-serif !important;
+    // font-family: 'Open Sans', sans-serif;
+     font-weight: bold;
+     font-size: 13px;
       -webkit-font-smoothing: antialiased;
     height: 332px;
     width: 186px;
     margin-left: 10px;
-    line-height: 1.68;
+    line-height: 1.95;
     text-align: center;
     padding-top: 3px;
     padding-left: 3px;
