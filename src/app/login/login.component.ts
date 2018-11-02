@@ -11,6 +11,10 @@ export class LoginComponent implements OnInit {
   constructor(private location:Location) { }
 
   ngOnInit() {
+    document.getElementById('panelpopid').style.display = "none";
+    // Step 2
+    document.getElementById('bg-blur').style.backgroundImage = "url('assets/pgBack12.jpg')";
+    document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
   }
 
 }
