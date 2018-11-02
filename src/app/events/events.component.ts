@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { DataService } from '../data.service';
-declare var enterOnTimeOut:any, enter:any, loginFunction:any;
+declare var enterOnTimeOut:any, enter:any;
 
 
 @Component({
@@ -18,18 +18,23 @@ data:any=[];
    }
 
   ngOnInit() {
+     document.getElementById('panelpopid').style.display = "none";
     // Style Norms
     var x = document.getElementsByClassName("dash-background");
     var i; for (i = 0; i < x.length; i++)
     { x[i].setAttribute("style", "opacity: 0;"); };
     document.getElementById('bg-blur').style.backgroundImage = "url('assets/pgBack12.jpg')";
     document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
-    // Params
+    //comingsoon
+    $('.enter-act1').css('display', '');
+    $('.enter-act2').css('display', '');
+    $('.enter-delay').css('visibility', 'visible');
+    // Params - TOOLKIT
     this.activatedRoute.params.subscribe((params:Params)=>{
       if(params.location != undefined){
         this.data= this.dataSer.getEventsPosts(params['location'])
-        enter();
-        enterOnTimeOut(500);
+        // enter();
+        // enterOnTimeOut(500);
 
       }
     })
