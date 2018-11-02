@@ -14,7 +14,9 @@
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #222;
+    // background: #222;
+    border-right: solid 1px rgb(50,50,50);
+    background-color: rgba(10,10,10,0.92);
     color: #fff;
     transition: all 0.3s;
         margin-top: 50px;
@@ -31,7 +33,7 @@
 }
 
 #sidelayer1.active {
-    display: none;
+    opacity: 1;
 }
 
 
@@ -44,7 +46,7 @@
 }
 
 .spacer {
-  height: 10px;
+  height: 8px;
   background-color: rgba(0,0,0,0);
 }
 
@@ -55,20 +57,21 @@
   width: 186px;
   margin-left: 10px;
   text-align: center;
-  border: solid 1px white;
+  border: solid 1px rgb(145,145,145);
   padding-top: 3px;
   padding-left: 3px;
   transition: .1s;
-  background-color: rgba(75,75,75,.7);
+  background-color: rgba(56,59,61,.7);
 }
 
 .cityitem:hover {
-  color: #000;
-  background-color: rgba(255,255,255,.8);
+  color: #fff;
+  background-color: rgba(120,120,120,.8);
 }
 
 .cityitem:active {
-  background-color: rgba(50,50,50,.3);
+  color: #fff;
+  background-color: rgba(255,255,255,.35);
 }
 
 .box {
@@ -110,7 +113,7 @@ ul {
 
 
   .sg-activatedLink div{
-    background-color: rgba(255,255,255,0.35) !important;
+    background-color: rgba(225,225,225,0.35) !important;
     color:#fff;
   }
 
@@ -122,15 +125,16 @@ ul {
      font-weight: bold;
      font-size: 13px;
       -webkit-font-smoothing: antialiased;
-    height: 332px;
+    height: 322px;
     width: 186px;
     margin-left: 10px;
-    line-height: 1.95;
+    line-height: 1.92;
     text-align: center;
     padding-top: 3px;
     padding-left: 3px;
     transition: .1s;
     cursor: default;
     animation: fadein 2s;
-    background-color: rgba(25,25,25,.3);
+    border: solid 1px rgba(175,175,175,.2);
+    background-color: rgba(175,175,175,.0);
   }

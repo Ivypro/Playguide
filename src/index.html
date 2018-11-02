@@ -45,17 +45,17 @@
               theme: "minimal"
           });
 
-          $('.sidebar-button').on('click', function () {
+          $('.sidebar-button, .closesmall').on('click', function () {
               $('#sidelayer1, #sidebar, #content').toggleClass('active');
               // $('.collapse.in').toggleClass('in');
               // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
           });
 
-          $('.closesmall').on('click', function () {
-              $('#sidebar, #content').toggleClass('active');
-              $('.collapse.in').toggleClass('in');
-              $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-          });
+          // $('.closesmall').on('click', function () {
+          //     $('#sidebar, #content').toggleClass('active');
+          //     $('.collapse.in').toggleClass('in');
+          //     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+          // });
 
 
       });
@@ -285,7 +285,7 @@ function loginFunction() {
    var x = document.getElementsByClassName("dash-background");
    var i; for (i = 0; i < x.length; i++)
    { x[i].setAttribute("style", "opacity: 0;"); };
-    document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
+    document.getElementById('wrapper').style.backgroundImage = "url('assets/pgBack12.jpg')";
 }
 
 
