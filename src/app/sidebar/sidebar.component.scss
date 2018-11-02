@@ -15,8 +15,8 @@
     height: 100vh;
     z-index: 999;
     // background: #222;
+    background-color: rgba(10,12,15,0.92);
     border-right: solid 1px rgb(50,50,50);
-    background-color: rgba(10,10,10,0.92);
     color: #fff;
     transition: all 0.3s;
         margin-top: 50px;
@@ -25,6 +25,10 @@
         -webkit-transition: translateZ(0);
         -webkit-backface-visibility: hidden;
         -webkit-perspective: 1000;
+}
+
+#sidebar:before {
+
 }
 
 #sidebar.active {

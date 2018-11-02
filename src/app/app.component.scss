@@ -1,6 +1,12 @@
-.wrapper {
+#wrapper {
+  height: 100vh;
+}
+
+#bg-blur {
   height: 100vh;
   background-image: url('/assets/pgBack7.jpg');
+  filter: blur(20px);
+  overflow: hidden;
   background-position: center;
   background-size: cover;
 }
