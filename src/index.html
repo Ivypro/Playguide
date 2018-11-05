@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 </head>
-<body style="-webkit-font-smoothing: subpixel-antialiased; background-color: #222;">
+<body style="-webkit-font-smoothing: subpixel-antialiased;">
   <base href="/">
   <app-root></app-root>
 
@@ -45,20 +45,23 @@
               theme: "minimal"
           });
 
-          $('.sidebar-button, .closesmall').on('click', function () {
+          $('.sidebar-button').on('click', function () {
               $('#sidelayer1, #sidebar, #content').toggleClass('active');
-              // $('.collapse.in').toggleClass('in');
-              // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
           });
 
-          // $('.closesmall').on('click', function () {
-          //     $('#sidebar, #content').toggleClass('active');
-          //     $('.collapse.in').toggleClass('in');
-          //     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-          // });
-
-
+          $('.closesmall').on('click', function () {
+            $('.cover').css('opacity', '0')
+            setTimeout(function(){
+              $('#sidelayer1, #sidebar, #content').toggleClass('active');
+              $('.cover').css('opacity', '1')
+            }, 500);
+          });
       });
+
+      function closeBar() {
+                $('#sidelayer1, #sidebar, #content').addClass('active')
+      }
+
   </script>
 
 
@@ -66,11 +69,6 @@
 
   <script type="text/javascript">
 
-  // function closeBar() {
-  //           $('#sidebar, #content').toggleClass('active');
-  //           $('.collapse.in').toggleClass('in');
-  //           $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-  // }
 
   // function soonHidden() {
   //     $('.cityitemsoon').css('display', 'none');

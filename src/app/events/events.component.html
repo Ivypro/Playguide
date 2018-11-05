@@ -1,3 +1,11 @@
+<img *ngIf="this.dataSer.photoes.length > 0" src (error)="closeFlip()" style="display: none">
+
+<img *ngIf="this.dataSer.photoes.length==0" src (error)="openFlipM()" style="display: none">
+
+
+
+<!-- SCRIPT IF-DIVS -->
+
 <div class="contain">
 
 <div class="loader">
@@ -11,7 +19,10 @@
 <!--- FLIP  HOUSE --->
 <div *ngIf="flipList" class="fliphouse fadein" style="position: relative; height: 100%; ">
   <!-- Button -->
-  <div class="flipbtn" style="position: absolute; width: 52.5px; height: 27px; top: -39px; right: 4.5px; background-color: rgba(0,0,0,.8);">
+  <div *ngIf="!this.dataSer.photoes.length==0" class="flipbtn" style="position: absolute; width: 52.5px; height: 27px; top: -39px; right: 4.5px; background-color: rgba(0,0,0,.8);">
+    <a class="tiny button" (click)="closeFlip()" style="vertical-align: top; margin-left: 0px; margin-top: 0px; color: white;"><font class="w3-hide-medium w3-hide-large">I N F O</font><font class="w3-hide-small"> CLOSE  </font></a>
+  </div>
+  <div *ngIf="this.dataSer.photoes.length==0" class="flipbtn w3-hide-small" style="position: absolute; width: 52.5px; height: 27px; top: -39px; right: 4.5px; background-color: rgba(0,0,0,.8);">
     <a class="tiny button" (click)="closeFlip()" style="vertical-align: top; margin-left: 0px; margin-top: 0px; color: white;"><font class="w3-hide-medium w3-hide-large">I N F O</font><font class="w3-hide-small"> CLOSE  </font></a>
   </div>
 <!-- City List --->

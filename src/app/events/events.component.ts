@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { DataService } from '../data.service';
-declare var enterOnTimeOut:any, enter:any;
+declare var $:any, enterOnTimeOut:any, enter:any;
 
 
 @Component({
@@ -39,6 +39,19 @@ data:any=[];
       }
     })
   }
+
+  openFlipM() {
+    if($(window).width() <= 600){
+
+    console.log('IF WIDTH Open Flip Called')
+      document.getElementById('infoid').style.display = "none";
+      this.flipList=true;
+
+         }
+
+
+  }
+
 
 
   openFlip() {

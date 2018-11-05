@@ -22,6 +22,8 @@ export class EComponent implements OnInit {
 
   ngOnInit() {
 
+    document.getElementById('panelpopid').style.display = "none";
+
   // if (window.screen.width > 560) { // 768px portrait
     // this.mobile = false;
   // }

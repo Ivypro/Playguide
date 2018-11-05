@@ -17,9 +17,11 @@ export class BlankComponent implements OnInit {
 
 
    ngOnInit() {
+     document.getElementById('panelpopid').style.display = "";
+    /*
      this.data.getPosts().subscribe(
        data => this.posts$ = data
-     );
+     ); */
    }
 
 }

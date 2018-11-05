@@ -83,12 +83,19 @@ display: none;
     -webkit-transition: translateZ(0);
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
-
-
 }
+
+//Safari ONLY
+_:default:not(:root:root), #content {
+      position: fixed;
+ }
 
 #content.active {
     width: calc(100%);
+}
+
+#content.active .cover {
+  display: none;
 }
 
 /*    DIV to SINK TOGGLE BUTTON UNDER NAVBARS        */
@@ -280,10 +287,24 @@ top: -18px;
    z-index: 10;
     left: 0px;
      top: 0px;
-      width: 100vw;
-       height: 100vh;
+      width: calc(100vw - 250px);
+       height: calc(100vh);
         color: white;
-         background: rgba(0,0,0,0.75);
+        transition: 1s;
+         background: rgba(0,0,0,0.9);
+}
+
+.cover-center {
+  position: absolute;
+  transform: translate(-45%,-50%) rotate(90deg) ;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 40px;
+    left: 50%;
+     top: 50%;
+       height: 20px;
+        color: white;
+         background: rgba(200,0,0,0.9);
 }
 
 // Firefox ONLY 1+ ALL //

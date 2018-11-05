@@ -3,6 +3,8 @@
 }
 
 #bg-blur {
+  position: fixed;
+  width: 100vw;
   height: 100vh;
   background-image: url('/assets/pgBack7.jpg');
   filter: blur(20px);
