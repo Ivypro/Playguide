@@ -45,21 +45,36 @@
               theme: "minimal"
           });
 
-          $('.sidebar-button').on('click', function () {
+          $('.sidebar-button, .cover').on('click', function () {
               $('#sidelayer1, #sidebar, #content').toggleClass('active');
           });
 
           $('.closesmall').on('click', function () {
+            $('.cover').css('transition', '1s')
             $('.cover').css('opacity', '0')
             setTimeout(function(){
               $('#sidelayer1, #sidebar, #content').toggleClass('active');
-              $('.cover').css('opacity', '1')
+              setTimeout(function(){
+                $('.cover').css('transition', '0s')
+                $('.cover').css('opacity', '1')
+              }, 500);
             }, 500);
+
           });
+
+          $(window).resize(function(){
+           if($(window).width() >= 993){
+              $('#sidelayer1, #sidebar, #content').removeClass('active');
+            }
+          });
+
+
       });
 
+      // END DOC:READY
+
       function closeBar() {
-                $('#sidelayer1, #sidebar, #content').addClass('active')
+                // $('#sidelayer1, #sidebar, #content').addClass('active')
       }
 
   </script>
@@ -386,6 +401,23 @@ $('.enter-delay').css('display', '');
 $('#sidebar').css('background-color', '#222');
 $('#panelid').css({'margin-left': '10%', 'margin-right': '10%', 'margin-top': '25px', 'height': '76vh'});
 }
+
+// $(window).resize(function(){
+//  if($(window).width() >= 1024){
+//     var targetOffset = $("#section--4").offset().top;
+//     var $w = $(window).scroll(function() {
+//         if ( $w.scrollTop() + 200 > targetOffset ) {
+//             $("#logo").fadeIn(500);
+//             $("#logo2").fadeOut('slow');
+//             $("header").css({"overflow": "hidden"});
+//         } else {
+//             $("#logo2").fadeIn(2000)
+//             $("#logo").fadeOut('fast');
+//             $("header").css({"overflow": "visible"});
+//         }
+//       });
+//    }
+// });
 
 </script>
 </html>
