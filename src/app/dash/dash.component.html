@@ -10,11 +10,13 @@
 
 <!-- Main Content -->
 <div class="dash-fader">
+  <div class="dash-display">
 
   <div class="sidebar-button w3-hide-large"><i class="fa fa-bars"></i></div>
 
 <router-outlet></router-outlet>
 
+</div>
 </div>
 
 <!-- Mobile Fader -->
@@ -40,10 +42,10 @@
 </div>
 
 <h5 (click)="fun()">Purchase Securely <i onclick="$('.fa-lock').css('color', 'red');" style="color: #998100" class="fa fa-lock" aria-hidden="true"></i></h5>
-  Full Name<br><input tabindex="-1"><br>
-  Credit Card #<br><input tabindex="-1"><br>
-  Expiration MM/YY<br><input tabindex="-1"><br>
-  CVV (3-Digit)<br><input tabindex="-1"><br>
+  Full Name<br><input ><br>
+  Credit Card #<br><input ><br>
+  Expiration MM/YY<br><input ><br>
+  CVV (3-Digit)<br><input ><br>
   <hr>
   Tickets (#)<br><input [(ngModel)]="tickets" placeholder="1 (Just Me)" name="tickets" id="tickets" style="padding-left: 8px;"><br>
   <h6>Charge: {{calculateCharge(this.dataSer.selectedEvent?.price)+'$'}}</h6><br>

@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpErrorResponse  } from '@angular/common/http';
 import { DataService } from '../data.service';
 
+declare var $:any;
+
 @Component({
   selector: 'app-e',
   templateUrl: './e.component.html',
@@ -24,12 +26,18 @@ export class EComponent implements OnInit {
 
     document.getElementById('panelpopid').style.display = "none";
 
-  // if (window.screen.width > 560) { // 768px portrait
-    // this.mobile = false;
-  // }
+  // if (window.screen.width < 600)
+  if($(window).width() <= 600){
+  $('#sidelayer1, #sidebar, #content').css('transition', '0s');
+  $('#sidelayer1, #sidebar, #content').addClass('active')
+  setTimeout(() => {
+    $('#sidelayer1, #sidebar, #content').css('transition', '.3s');
+  }, 0);
+          }
 
   this.sub=  this.route.params.subscribe(params => { this.post_slug = params['post_slug'] || ''; });
           this.getPostBySlug();
+          
   }
 
      getPostBySlug() {

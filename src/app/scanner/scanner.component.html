@@ -10,10 +10,23 @@
 </div>
 <app-buttons></app-buttons>
   <div class="infodetails" *ngIf="this.dataSer.photoes.length >0">
-<p >
+<p>
+  <font class="w3-hide-medium w3-hide-large">
+    <div style="width: 101%; color: white; text-align: center; background-color: rgba(0,0,0,0.4);">
+    {{this.dataSer.selectedEvent?.location||this.dataSer.events[0]?.location}}</div>
+    <div style="width: 101%; color: black; text-align: center; background-color: rgba(250,250,250,0.55);">
+  {{this.dataSer.selectedEvent?.heading||this.dataSer.events[0]?.heading}}</div>
+  <div style="width: 101%; text-align: center; background-color: rgba(0,0,0,0.3);">
+  {{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:" MMMM dd"}}<sup>{{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:"dd"|dateSuffix}}</sup>{{' 8pm'}}
+</div>
+  </font>
+<font class="w3-hide-small">
 {{this.dataSer.selectedEvent?.heading||this.dataSer.events[0]?.heading}}<br>
 Location: {{this.dataSer.selectedEvent?.location||this.dataSer.events[0]?.location}}<br>
-Date & Time: {{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:" MMMM dd"}}<sup>{{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:"dd"|dateSuffix}}</sup>{{' 9pm'}}<br><br>
+Date & Time: {{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:" MMMM dd"}}<sup>{{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:"dd"|dateSuffix}}</sup>{{' 8pm'}}
+<br>
+</font>
+<br>
 {{this.dataSer.selectedEvent?.details||this.dataSer.events[0]?.details}}
 <br><br>Entertainment: {{this.dataSer.selectedEvent?.entertainment||this.dataSer.events[0]?.entertainment}}<br>
 Drinks: {{this.dataSer.selectedEvent?.drinks||this.dataSer.events[0]?.drinks}}

@@ -1,8 +1,4 @@
-<!-- <script onload="closeMobile()"></script>  // TRIGGERS TOO EARLY. -->
 
-<img src onerror="enter()" style="display: none;">  <!-- TRIGGERS AFTER POPUP LOAD --->
-
-<img src *ngIf="MobileScreen" onerror="closeBar();" style="display: none;">  <!-- TRIGGERS AFTER POPUP LOAD --->
 
 <div class="panelheader">
 <div class="fadein centerheader w3-hide-medium w3-hide-small">Purchase tickets to this <font class="chromeBold">private event</font> or <font class="chromeBold">fundraiser</font>.</div>
@@ -104,7 +100,7 @@ Location
 Date
 </div>
 <div class="line seg" style="width: calc(100% - 63px);">
-<font class="w3-hide-medium">9 PM | </font>{{post.date}}
+<font class="w3-hide-medium">8 PM | </font>{{post.date}}
 </div>
 
 <div class="line seg tit" style="width: 63px;">
@@ -126,7 +122,7 @@ Price
 </div>
   <div class="detright">
 <font class="w3-hide-large w3-hide-medium" style="font-weight: bold">
-  {{post.location}} 9 PM | {{post.date}}<br> &nbsp; &nbsp;
+  {{post.location}} 8 PM | {{post.date}}<br> &nbsp; &nbsp;
 </font>
     {{post.details}} {{post.details}} {{post.details}}
     <font class="w3-hide-large w3-hide-medium" style=" font-weight: bold"><br>
