@@ -7,10 +7,10 @@
 <div class="panel fadein w3-card-4">
     <div *ngIf="!loader" style="height: 100%;">
       <div class="fadein" *ngIf="post.id && post.id > 0; else dataNotFound">
-        <div onclick="$('#sharemodalid').show();" class="a-item-share w3-hide-medium w3-hide-large">Share:<img class="s-image1" src="/assets/facebook.png"><img class="s-image2" src="/assets/twitter.png"></div>
+        <div onclick="$('#sharemodalid').show(); updateShareUrl();" class="a-item-share w3-hide-medium w3-hide-large">Share:<img class="s-image1" src="/assets/facebook.png"><img class="s-image2" src="/assets/twitter.png"></div>
 
         <!--- Back Events -->
-          <div onclick="" class="abackitem w3-card-4"><div class="earrow">&larr; </div> <div class="etag"> Events </div></div>
+          <a [routerLink]='["../../events/LosAngeles"]'><div class="abackitem w3-card-4"><div class="earrow">&larr; </div> <div class="etag"> Events </div></div></a>
           <!-- End Back Events -->
 
 <div class="catchoverflow">
@@ -138,7 +138,7 @@ Price
 <div class="marspacer"></div>
 <div class="thebtn top w3-card-4" onclick="$('#quickloginid').show();"><div class="padspacer"></div>Buy Tickets</div>
 <div class="marspacer"></div>
-<div class="thebtn bottom w3-card-4 w3-hide-small" onclick="$('#sharemodalid').show();"><div class="padspacer"></div><font style="margin-left: 6px;">Share</font> <img class="s-image1" src="/assets/facebook.png"><img class="s-image2" src="/assets/twitter.png"></div>
+<div class="thebtn bottom w3-card-4 w3-hide-small" onclick="$('#sharemodalid').show(); updateShareUrl();"><div class="padspacer"></div><font style="margin-left: 6px;">Share</font> <img class="s-image1" src="/assets/facebook.png"><img class="s-image2" src="/assets/twitter.png"></div>
 
 <div class="line-buttons w3-hide-medium w3-hide-large"></div>
 </div>

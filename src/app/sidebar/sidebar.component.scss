@@ -142,3 +142,8 @@ ul {
     border: solid 1px rgba(175,175,175,.2);
     background-color: rgba(175,175,175,.0);
   }
+
+  //Safari ONLY
+  _:default:not(:root:root), .cityitemsoon {
+    font-weight: normal;
+   }
