@@ -24,7 +24,7 @@ POST THE<br>FIRST EVENT
         <font color="red">- Demo Events -</font>
     </div>
     <div  class="bannerdate w3-card-2" *ngIf="this.checkDate(event?.date,i)">
-        {{this.dataSer.dateConverter(event?.date)|date:"EEEE, MMMM dd"}}<sup>{{this.dataSer.dateConverter(event?.date)|date:"dd"|dateSuffix}}</sup>
+        {{this.dataSer.dateConverter(event?.date)|date:"EEEE, MMMM d"}}<sup>{{this.dataSer.dateConverter(event?.date)|date:"dd"|dateSuffix}}</sup>
     </div>
 
   <div class="anchor banner w3-card-2 "  (click)="this.dataSer.selectedItem(event);closeFlip()" [ngClass]=" {'w4-city-2': i==this.dataSer.events.indexOf(this.dataSer.selectedEvent)}" >
@@ -35,7 +35,7 @@ POST THE<br>FIRST EVENT
     {{event.heading}}<br>
     <font size="1px">Entertainment:</font> {{event.entertainment}}<br>
     <font size="1px">Drinks:</font> {{event.drinks}}</div>
-    <div class="bannerprice w3-card-2">{{event.price+'$'}}</div>
+    <div class="bannerprice w3-card-2">{{event.price!=0 ? '$'+event.price : "Free" }}</div>
     </div>
 </div>
 

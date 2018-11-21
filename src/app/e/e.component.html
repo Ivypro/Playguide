@@ -19,23 +19,13 @@
 <!---
           <img src="{{post.image}}" style="min-width: 100%; height: 100%; object-fit: cover;">
 --->
-<div class="myPhotos imagefill showfirst" [ngStyle]="{'background-image': 'url('+post.image+')'}">
+<div class="myPhotos imagefill showfirst" [ngStyle]="{'background-image': 'url('+post.images[0]+')'}">
 </div>
 
-<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.images[1]+')'}">
 </div>
 
-<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
-</div>
 
-<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
-</div>
-
-<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
-</div>
-
-<div class="myPhotos imagefill" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
-</div>
 
 
 <div class="image-line"></div>
@@ -44,29 +34,14 @@
      <div class="nailbar">
        <div class="nailbar-align w3-card-4">
 
-<div onclick="currentDiv2(1)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image+')'}">
+<div onclick="currentDiv2(1)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.images[0]+')'}">
   <div class="naillay thumb"></div>
 </div><div class="nailspacer"></div>
 
-<div onclick="currentDiv2(2)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
+<div onclick="currentDiv2(2)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.images[1]+')'}">
   <div class="naillay thumb"></div>
 </div><div class="nailspacer"></div>
 
-<div onclick="currentDiv2(3)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
-  <div class="naillay thumb"></div>
-</div><div class="nailspacer"></div>
-
-<div onclick="currentDiv2(4)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
-  <div class="naillay thumb"></div>
-</div><div class="nailspacer"></div>
-
-<div onclick="currentDiv2(5)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
-  <div class="naillay thumb"></div>
-</div><div class="nailspacer"></div>
-
-<div onclick="currentDiv2(6)" class="nailimg" [ngStyle]="{'background-image': 'url('+post.image2+')'}">
-  <div class="naillay thumb"></div>
-</div><div class="nailspacer"></div>
 
 </div> <!-- align -->
   </div><!-- nailbar -->
@@ -114,7 +89,7 @@ Drinks
 Price
 </div>
 <div class="line seg fill" style="width: calc(100% - 63px);">
-<font style="color: rgba(40,140,245,1)"><b>${{post.price}}</b></font>
+<font style="color: rgba(40,140,245,1)"><b>{{post.price!=0 ? '$'+post.price : "Free" }}</b></font>
 </div>
 
 

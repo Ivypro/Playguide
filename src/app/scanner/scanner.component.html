@@ -17,13 +17,13 @@
     <div style="width: 101%; color: black; text-align: center; background-color: rgba(250,250,250,0.55);">
   {{this.dataSer.selectedEvent?.heading||this.dataSer.events[0]?.heading}}</div>
   <div style="width: 101%; text-align: center; background-color: rgba(0,0,0,0.3);">
-  {{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:" MMMM dd"}}<sup>{{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:"dd"|dateSuffix}}</sup>{{' 8pm'}}
+  {{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:" MMMM d"}}<sup>{{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:"dd"|dateSuffix}}</sup>{{' 8pm'}}
 </div>
   </font>
 <font class="w3-hide-small">
 {{this.dataSer.selectedEvent?.heading||this.dataSer.events[0]?.heading}}<br>
 Location: {{this.dataSer.selectedEvent?.location||this.dataSer.events[0]?.location}}<br>
-Date & Time: {{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:" MMMM dd"}}<sup>{{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:"dd"|dateSuffix}}</sup>{{' 8pm'}}
+Date & Time: {{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:" MMMM d"}}<sup>{{this.dataSer.dateConverter(this.dataSer.selectedEvent?.date)|date:"dd"|dateSuffix}}</sup>{{' 8pm'}}
 <br>
 </font>
 <br>

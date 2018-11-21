@@ -20,6 +20,24 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
 }
 
+
+closeOnSmall() {
+  if($(window).width() <= 600){
+
+            $('.cover').css('transition', '1s')
+            $('.cover').css('opacity', '0')
+            setTimeout(function(){
+              $('#sidelayer1, #sidebar, #content').toggleClass('active');
+              setTimeout(function(){
+                $('.cover').css('transition', '0s')
+                $('.cover').css('opacity', '1')
+              }, 500);
+            }, 500);
+
+       }
+
+// TESTING
+
   testTs() {
     console.log('Router test');
       this.router.navigate(['/hlogin']);
