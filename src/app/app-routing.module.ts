@@ -13,6 +13,7 @@ import { SecurityComponent } from "./security/security.component";
 import { ApidetailsComponent } from "./apidetails/apidetails.component";
 import { EComponent } from './e/e.component';
 
+
 const routes: Routes = [
   {
     path: '',

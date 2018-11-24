@@ -59,7 +59,7 @@ import { GuestlistioComponent } from './guestlistio/guestlistio.component'
     HttpClientModule,
     FormsModule,
     RouterModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuestlistioComponent implements OnInit {
 
+ifGuestlist = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  atGuestlist() {
+      this.ifGuestlist=false;
   }
 
 }
