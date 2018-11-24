@@ -24,7 +24,8 @@ import { GlobalDirective,DateSuffix } from './global.directive';
 import { ScannerComponent } from './scanner/scanner.component';
 import { NailheadComponent } from './nailhead/nailhead.component';
 import { EComponent } from './e/e.component';
-import { FormsModule} from '@angular/forms'
+import { FormsModule} from '@angular/forms';
+import { GuestlistioComponent } from './guestlistio/guestlistio.component'
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { FormsModule} from '@angular/forms'
     ScannerComponent,
     NailheadComponent,
     EComponent,
-    DateSuffix
+    DateSuffix,
+    GuestlistioComponent
   ],
   imports: [
     BrowserModule,

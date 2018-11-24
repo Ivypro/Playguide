@@ -34,7 +34,7 @@ closeOnSmall() {
               }, 500);
             }, 500);
 
-       }
+       }}
 
 // TESTING
 

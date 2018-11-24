@@ -77,8 +77,12 @@
   color: #fff;
   background-color: rgba(255,255,255,.35);
 }
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 .box {
+font-family: 'Raleway', serif;
+font-weight: 600;
+font-size: 1.05rem;
+  -webkit-font-smoothing: antialiased;
   color: #fff;
   background-color: rgba(200,200,200,0.3);
   -webkit-font-smoothing: antialiased;
