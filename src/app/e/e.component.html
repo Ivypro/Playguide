@@ -96,13 +96,21 @@ Price
 
 </div>
   <div class="detright">
+    <font class="w3-hide-medium w3-hide-large">
+      <div style="margin-top: 5px; width: 96%; color: white; text-align: center; background-color: rgba(0,0,0,0.4);">
+      Playguide.com - Event</div>
+      <div style="overflow: hidden; width: 96%; color: black; text-align: center; background-color: rgba(250,250,250,0.55);">
+    {{post.heading}}</div>
+    <div style="margin-bottom: 7px; width: 96%; text-align: center; background-color: rgba(0,0,0,0.3);">
+    {{post.location}} 8 PM | {{post.date}}
+  </div>
+    </font>
 <font class="w3-hide-large w3-hide-medium" style="font-weight: bold">
-  {{post.location}} 8 PM | {{post.date}}<br> &nbsp; &nbsp;
+   &nbsp; &nbsp;
 </font>
     {{post.details}} {{post.details}} {{post.details}}
-    <font class="w3-hide-large w3-hide-medium" style=" font-weight: bold"><br>
-          Price: ${{post.price}}<br><br>
-      {{post.heading}}<br>
+    <font class="w3-hide-large w3-hide-medium" style=" font-weight: bold"><br><br>
+          Price: ${{post.price}}<br>
       Entertainment: {{post.entertainment}}<br>
       Drinks: {{post.drinks}}
     </font>
@@ -111,7 +119,7 @@ Price
 <div class="rightbuttons">
 
 <div class="marspacer"></div>
-<div class="thebtn top w3-card-4" onclick="$('#quickloginid').show();"><div class="padspacer"></div>Buy Tickets</div>
+<div class="thebtn top w3-card-4" onclick="$('#quickloginid').show();"><div class="padspacer"></div>{{post.price!=0 ? 'Buy' : "Free" }} Tickets</div>
 <div class="marspacer"></div>
 <div class="thebtn bottom w3-card-4 w3-hide-small" onclick="$('#sharemodalid').show(); updateShareUrl();"><div class="padspacer"></div><font style="margin-left: 6px;">Share</font> <img class="s-image1" src="/assets/facebook.png"><img class="s-image2" src="/assets/twitter.png"></div>
 

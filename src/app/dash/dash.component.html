@@ -42,15 +42,16 @@
 </div>
 
 <h5 (click)="fun()">Purchase Securely <i onclick="$('.fa-lock').css('color', 'red');" style="color: #998100" class="fa fa-lock" aria-hidden="true"></i></h5>
+<hr>
   Full Name<br><input ><br>
   Credit Card #<br><input ><br>
   Expiration MM/YY<br><input ><br>
   CVV (3-Digit)<br><input ><br>
-  <hr>
-  Tickets (#)<br><input [(ngModel)]="tickets" placeholder="1 (Just Me)" name="tickets" id="tickets" style="padding-left: 8px;"><br>
+
+  Tickets (#)<br><input [(ngModel)]="tickets" placeholder="1: Just Me" name="tickets" id="tickets" style="padding-left: 8px;"><br>
   <h6>Charge: {{calculateCharge(this.dataSer.selectedEvent?.price)+'$'}}</h6><br>
-  <a class="button" (click)="reset()" onClick="closeTicket(); alert('Check your email for Tickets!')" style="color: white; margin-top: -20px; -webkit-font-smoothing: antialiased;">Purchase Tickets</a><br>
-  <button type="button" (click)="reset()" onclick="closeTicket()" style="margin-top: -5px; -webkit-font-smoothing: antialiased; border-radius: 4px; padding: 10px; line-height: 0.5" class="btn btn-secondary">Close</button>
+  <a class="button" (click)="reset()" onClick="closeTicket(); alert('Check your email for Tickets!')" style="border-radius: 2px; color: white; margin-top: -20px; -webkit-font-smoothing: antialiased;">Purchase Tickets</a><br>
+  <button type="button" (click)="reset()" onclick="closeTicket()" style="margin-top: -5px; -webkit-font-smoothing: antialiased; border-radius: 2px; padding: 10px; line-height: 0.5" class="btn btn-secondary">Close</button>
 
 
 </div>
@@ -94,8 +95,9 @@
     </div>
 
     <br><br>
-    <button type="button" onclick="$('#quickloginid').hide();alert('Login successful!');$('#ticketid').show();" style="margin-top: -7px; border-radius: 4px; -webkit-font-smoothing: antialiased;" class="f-blue btn btn-primary">Login</button>
-      <button type="button" onclick="$('#quickloginid').hide();" style="margin-top: -7px; margin-left: 15px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+    <button type="button" onclick="$('#quickloginid').hide();" style="border-radius: 2px; margin-top: -7px; margin-left: 0px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+    <button type="button" onclick="$('#quickloginid').hide();alert('Login successful!');$('#ticketid').show();" style="margin-left: 15px; margin-top: -7px; border-radius: 2px; -webkit-font-smoothing: antialiased;" class="f-blue btn btn-primary">Login</button>
+
 
   </div>
 
@@ -118,8 +120,9 @@
     </div>
 
     <br><br>
-    <button type="button" onclick="$('#quickloginid').hide();alert('Registration successful!');$('#ticketid').show();" style="margin-top: -7px; border-radius: 4px; -webkit-font-smoothing: antialiased;" class="btn btn-danger">Register</button>
-      <button type="button" onclick="$('#quickloginid').hide();" style="margin-top: -7px; margin-left: 15px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+    <button type="button" onclick="$('#quickloginid').hide();" style="border-radius: 2px; margin-top: -7px; margin-left: 0px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+    <button type="button" onclick="$('#quickloginid').hide();alert('Registration successful!');$('#ticketid').show();" style="margin-left: 15px; margin-top: -7px; border-radius: 2px; -webkit-font-smoothing: antialiased;" class="btn btn-danger">Register</button>
+
 
   </div>
 
@@ -137,8 +140,8 @@
 <h1><br><br><br></h1><br>
   <input type="text" class="box" placeholder="Email" style="max-width: 300px; margin: 0 auto;" aria-describedby="exampleHelpText">
 <br>
-  <button type="button" onclick="$('#resetpassid').hide(); alert('Check your email for reset link.')" style="margin-top: -7px; border-radius: 4px; -webkit-font-smoothing: antialiased;" class="btn btn-success">Reset</button>
-    <button type="button" onclick="$('#resetpassid').hide();" style="margin-top: -7px; margin-left: 15px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+  <button type="button" onclick="$('#resetpassid').hide(); alert('Check your email for reset link.')" style="margin-top: -7px; border-radius: 2px; -webkit-font-smoothing: antialiased;" class="btn btn-success">Reset</button>
+    <button type="button" onclick="$('#resetpassid').hide();" style="margin-top: -7px; margin-left: 15px;border-radius: 2px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
 
 
 </div>
@@ -157,7 +160,7 @@
 <textarea id="dyShareHTML" readonly>/...</textarea>
 </div>
 
-    <button type="button" onclick="$('#sharemodalid').hide();" style="margin-top: 20px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
+    <button type="button" onclick="$('#sharemodalid').hide();" style="height: 30px;padding-top: 3px;border-radius: 2px;margin-top: 35px; -webkit-font-smoothing: antialiased;" class="btn btn-secondary">Close</button>
 
 
 </div>

@@ -29,6 +29,18 @@
   cursor: pointer;
 }
 
+.lowrightshare {
+  position: absolute;
+  background-image: url('/assets/facebook.png');
+  background-position: center;
+   background-size: cover;
+  width: 23px;
+  height: 23px;
+  right: 5px;
+  bottom: 5px;
+  cursor: pointer;
+}
+
 .infodetails {
   height: calc(100% - 256px);
   color: #e6e0c1;
@@ -43,4 +55,8 @@ padding: 15px;
 padding-top: 10px;
 padding-bottom: 15px;
 background-color: rgba(0,0,0,.3);
+}
+
+.break-all {
+  word-break: break-all;
 }

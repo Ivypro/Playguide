@@ -25,10 +25,17 @@ data:any=[];
     { x[i].setAttribute("style", "opacity: 0;"); };
     document.getElementById('bg-blur').style.backgroundImage = "url('assets/pgBack12.jpg')";
     document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
-    //comingsoon
+    // comingsoon & slogan
     $('.enter-act1').css('display', '');
     $('.enter-act2').css('display', '');
-    $('.enter-delay').css('visibility', 'visible');
+    // Loader
+    $('.loader').css('opacity', '1');
+    setTimeout(function(){
+    $('.loader').css('opacity', '0');
+    }, 1250);
+    setTimeout(function(){
+    $('.material').css('display', 'block');
+    }, 1850);
     // Params - TOOLKIT
     this.activatedRoute.params.subscribe((params:Params)=>{
       if(params.location != undefined){

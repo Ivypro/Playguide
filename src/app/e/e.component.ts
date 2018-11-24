@@ -25,8 +25,14 @@ export class EComponent implements OnInit {
   ngOnInit() {
 
     document.getElementById('panelpopid').style.display = "none";
+    // Style Norms
+    var x = document.getElementsByClassName("dash-background");
+    var i; for (i = 0; i < x.length; i++)
+    { x[i].setAttribute("style", "opacity: 0;"); };
+    document.getElementById('bg-blur').style.backgroundImage = "url('assets/pgBack12.jpg')";
+    document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
+    // -
 
-  // if (window.screen.width < 600)
   if($(window).width() <= 600){
   $('#sidelayer1, #sidebar, #content').css('transition', '0s');
   $('#sidelayer1, #sidebar, #content').addClass('active')
@@ -37,7 +43,7 @@ export class EComponent implements OnInit {
 
   this.sub=  this.route.params.subscribe(params => { this.post_slug = params['post_slug'] || ''; });
           this.getPostBySlug();
-          
+
   }
 
      getPostBySlug() {

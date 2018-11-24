@@ -21,26 +21,26 @@ export class DataService {
   //===============to get data once only==============
   getEventsPosts(location) {
    if(this.isApi){
-    this.http.get('https://my-json-server.typicode.com/ivypro/playguide-angular/posts').subscribe(
-        (res: any) => {
-          this.events = [];
-          this.photoes = [];
-          res = this.filterByCurrentDate(res);
-          res= this.shortByDate(res);
-          res.forEach(e => {
-            if (e.location.replace(" ", "") == location) {
-              this.events.push(e);
-              this.photoes.push(e.images[0])
-            }
-          });
-         console.log('res',res);
-          if(this.events[0]){
-            this.currentImgUrl = this.events[0].images[0];
-            this.selectedEvent=this.events[0];
-          }
-          return this.events
-        }
-      )
+    // this.http.get('https://my-json-server.typicode.com/ivypro/playguide-angular/posts').subscribe(
+    //     (res: any) => {
+    //       this.events = [];
+    //       this.photoes = [];
+    //       res = this.filterByCurrentDate(res);
+    //       res= this.shortByDate(res);
+    //       res.forEach(e => {
+    //         if (e.location.replace(" ", "") == location) {
+    //           this.events.push(e);
+    //           this.photoes.push(e.images[0])
+    //         }
+    //       });
+    //      console.log('res',res);
+    //       if(this.events[0]){
+    //         this.currentImgUrl = this.events[0].images[0];
+    //         this.selectedEvent=this.events[0];
+    //       }
+    //       return this.events
+    //     }
+    //   )
    }
    else{
 
@@ -103,7 +103,7 @@ filterByCurrentDate(items: any) {
 
   getPosts() {
     return this.http.get('https://my-json-server.typicode.com/ivypro/playguide-angular/posts')
-    // return this.http.get('./assets/db.json')
+    // return this.http.get('/assets/db.json')
 
   }
 

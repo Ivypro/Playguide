@@ -29,10 +29,14 @@ POST THE<br>FIRST EVENT
 
   <div class="anchor banner w3-card-2 "  (click)="this.dataSer.selectedItem(event);closeFlip()" [ngClass]=" {'w4-city-2': i==this.dataSer.events.indexOf(this.dataSer.selectedEvent)}" >
     <div class="bannerimg">
-    <img src={{event.images[0]}} class="banimg"></div>
+    <img src={{event.images[0]}} class="banimg">
+    <span class="rank-star">&#8902;</span>
+    <span class="rank-star-num">9</span>
+
+  </div>
     <div class="banlayover w3-hide-large"></div>
     <div class="bannerdetail">
-    {{event.heading}}<br>
+    {{event.heading}} <br>
     <font size="1px">Entertainment:</font> {{event.entertainment}}<br>
     <font size="1px">Drinks:</font> {{event.drinks}}</div>
     <div class="bannerprice w3-card-2">{{event.price!=0 ? '$'+event.price : "Free" }}</div>
