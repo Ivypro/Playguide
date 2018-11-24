@@ -227,8 +227,14 @@ position: relative;
 
 .email-text {
   color: rgba(220,220,220,1);
+  // cursor: context-menu;
   cursor: default;
   transition: .3s;
+}
+
+.email-text:hover {
+  color: rgba(185,185,185,1);
+  transition: .2s;
 }
 
 

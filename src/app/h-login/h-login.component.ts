@@ -25,6 +25,9 @@ export class HLoginComponent implements OnInit {
     document.getElementById('bg-blur').style.backgroundImage = "url('assets/pgBack44.jpg')";
     // comingsoon
     $('.cityitemsoon').css('display', 'none');
+    // set tab
+    if($(window).width() >= 1200){
+    document.getElementById("set-rtab").click(); };
   }
 
   testTs2() {

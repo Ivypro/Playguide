@@ -40,7 +40,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'hlogin',
+    path: 'hosting',
     component: HLoginComponent
   },
   {

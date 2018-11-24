@@ -19,12 +19,51 @@ background-color: rgba(0,0,0,.5);
 .signin {
   -webkit-font-smoothing: antialiased;
   color: #fff;
-  max-width: 300px;
+  max-width: 280px;
   min-width: 255px;
   height: 100%;
-  margin: 0 auto;
+  float: right;
   background-color: rgba(255,255,255,.0);
 }
+
+@media (max-width:1199px){
+  .signin {
+    max-width: 300px;
+    float: none;
+margin: 0 auto;
+  }}
+
+  .left-box {
+    display: none;
+  }
+
+  @media (min-width:1200px){
+    .left-box {
+      display: block;
+      position: absolute;
+      border: solid 1px white;
+      height: calc(100% - 17px);
+      width: calc(100% - 265px);
+      left: 5px;
+      top: 5px;
+    }}
+
+    .top-pill {
+      padding-top: 6.5px;
+      -webkit-font-smoothing: antialiased;
+      font-family: "raleway";
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      position: relative;
+      top: 10px;
+      text-align: center;
+      background-color: rgba(50,50,50,.4);
+      width: 95%;
+      height: 20%;
+      margin: 0 auto;
+    }
+
 
 .ltabs {
   height: calc(100% - 50px);

@@ -9,13 +9,13 @@
 
       <div class="userbox">
         <!-- SHOW SIGN UP NOT LOGGED IN -->
-          <div class="signin" style="">
+          <div class="signin" style="display: none">
             <a routerLink="../login" onclick="loginFunction(); enter()"><i class="fa fa-sign-in"></i> Sign In</a>
           </div>
           <!-- SHOW EMAIL ON LOGIN -->
-          <div onclick="confirm('Do you want to log out?')" class="show-email-house" style="display: none">
+          <div class="show-email-house" style="display: ">
 
-            <i class="fa fa-power-off power-icon"></i>
+            <i onclick="confirm('Do you want to log out?')" class="fa fa-power-off power-icon"></i>
 
             <div class="catchoverflow-email">
         <font class="email-text" style="">
