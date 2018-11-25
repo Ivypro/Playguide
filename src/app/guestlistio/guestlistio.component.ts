@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $:any;
+
 @Component({
   selector: 'app-guestlistio',
   templateUrl: './guestlistio.component.html',
@@ -7,15 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuestlistioComponent implements OnInit {
 
-ifGuestlist = true;
+ifGuestlist = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  atGuestlist() {
+  xGuestlist() {
       this.ifGuestlist=false;
+      $('#buttonio').css('display', '');
+      $('#buttonio2').css('display', 'none');
+  }
+
+  atGuestlist() {
+      this.ifGuestlist=true;
+      $('#buttonio').css('display', 'none');
+      $('#buttonio2').css('display', 'block');
+  }
+
+  atGuestlist2() {
+      this.ifGuestlist=false;
+      $('#buttonio').css('display', '');
+      $('#buttonio2').css('display', 'none');
+
   }
 
 }

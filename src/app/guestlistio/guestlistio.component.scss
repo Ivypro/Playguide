@@ -1,3 +1,30 @@
+#buttonio {
+  position: fixed;
+  text-align: center;
+  border: solid 1px grey;
+  top: 70px;
+  left: 120px;
+  height: 30px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  z-index: 10000;
+}
+
+#buttonio2 {
+  display: none;
+  position: fixed;
+  text-align: center;
+  border: solid 1px grey;
+  top: 70px;
+  left: 120px;
+  height: 30px;
+  width: 100px;
+  background-color: black;
+  color: red;
+  z-index: 10000;
+}
+
 #dashio {
   position: fixed;
   text-align: center;
@@ -9,4 +36,11 @@
   background-color: black;
   color: white;
   z-index: 10000;
+}
+
+.ex {
+  font-size: 1.4rem;
+  margin-top: 3px;
+  margin-right: 635px;
+  cursor: pointer;
 }

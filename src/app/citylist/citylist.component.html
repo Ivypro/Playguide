@@ -30,9 +30,10 @@ POST THE<br>FIRST EVENT
   <div class="anchor banner w3-card-2 "  (click)="this.dataSer.selectedItem(event);closeFlip()" [ngClass]=" {'w4-city-2': i==this.dataSer.events.indexOf(this.dataSer.selectedEvent)}" >
     <div class="bannerimg">
     <img src={{event.images[0]}} class="banimg">
+    <!--- REVIEW STAR 2.0 --
     <span class="rank-star">&#8902;</span>
     <span class="rank-star-num">9</span>
-
+    <!-- REVIEW STAR 2.0 --->
   </div>
     <div class="banlayover w3-hide-large"></div>
     <div class="bannerdetail">
