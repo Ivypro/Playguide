@@ -1,12 +1,38 @@
-<nav class="navbar fixed-top navbar-light">
-  <div class="container">
+<div class="top-menu">
 
+
+<div class="menu-obj w3-card-2">
+
+  <font class="menu-hov" style="position: relative;top: 1px; font-size: .9rem">
+    <div onclick="$('#heavymodal').show();$('#heavymodal').css({'opacity': '1'});" (click)="menu()" class="menu-pro">S H A R E<!-- P R O F I L E --></div>
+  </font>
+  <font class="menu-hov" style="margin-top: 5px;"><hr>
+  <div class="menu-dollar"><i class="fa fa-dollar-sign" aria-hidden="true"></i></div></font>
+  <font class="menu-hov" style="position: relative;top: 0px;">
+    <div [routerLink]='["/host"]' (click)="menu()" class="menu-item">Hosting</div></font>
+  <font class="menu-hov" style="position: relative;top: 20px;">
+    <div  class="menu-item m-wait">Security</div></font>
+  <font class="menu-hov" style="position: relative;top: 40px;">
+    <div  class="menu-item m-wait">Staffing</div></font>
+
+</div>
+<div class="menu-obj-cov w3-card-2"><b>Ivypro Inc.</b></div>
+
+</div>
+
+
+<nav class="navbar fixed-top navbar-light">
+
+
+  <div class="container">
+<!-- NAV ITEM 1 -->
     <div class="noselect">
     <a class="navbar-brand" onclick="styleFunction();">
       <img src="assets/PlayguideBrand.png" width="102" >
     </a> <span class="enter-act1 w3-hide-small" style="display: none; cursor: default; font-size: .7em; position: relative; top: -2px; left: 2px; color: rgba(215,215,215,1);">The Social Hospitality Network</span>
-  </div>
+   </div>
 
+<!-- NAV ITEM 2 -->
       <div class="userbox">
         <!-- SHOW SIGN UP NOT LOGGED IN -->
           <div class="signin" style="display: none">
@@ -18,55 +44,58 @@
             <i onclick="confirm('Do you want to log out?')" class="fa fa-power-off power-icon"></i>
 
             <div class="catchoverflow-email">
-        <font class="email-text" style="">
+        <font class="email-text" (click)="menu()">
           blac2150@yahoo.com
         </font></div>
         </div>
           <!-- END EMAIL -->
       </div>
-
-      <div class="panelpop w3-grayscale-min" id="panelpopid" style="display:">
-          <div class="backpop backpop-img"></div>
-          <div class="backpop backpop-filter"></div>
-
-        <div class="popspacer"></div>
-            Welcome to Playguide.com where you can host or attend social events.
-      <!--  Welcome to Playguide.com where you can attend home and venue events. --><br><br>
-
-        <div class="welbox1 c-hide-714" >
-<div class="out-rim" style=""></div>
-        </div>
-        <div class="welbox2 c-align-475" >
-          <font color="lightblue">&nbsp;&#9906;&nbsp; Locate Social Events Near You<br></font>
-            &#8226; Party with your favorite Performer<br>
-            &#8226; Celebrate at unique home venues<br>
-            &#8226; Enjoy more fun with your Friends<br>
-            &#8226; Meet new people on our <i>Guestlist</i><br>
-            &#8226; Monetize your fraternity events<br>
-            &#8226; Our app makes it all very easy<br>
-          <img src="assets/PlayguideBrand.png" width="190" style="margin-left: 15px; margin-top: 12px;">
-
-          <div class="sidediv" style="top: 23px;">
-            Join As Partner</div>
-            <div class="sidediv" style="top: 53px;">
-              Musician</div>
-              <div class="sidediv" style="top: 83px;">
-                Speaker</div><!-- Comedian -->
-                <div class="sidediv" style="top: 113px;">
-                  Catering</div>
-                  <div class="sidediv" style="top: 143px;">
-                    Bouncer</div>
-                    <div class="sidediv" style="top: 173px;">
-                      Dancer</div><!-- Stripper -->
-                      <div class="sidediv" style="top: 203px;">
-                        Model</div><!-- /Socialite -->
-
-
-        </div>
-
-        <br><br>
-        <div class="popexitbtn" [routerLink]='["events/LosAngeles"]'>Browse Events</div>
-
-      </div>
+<!-- END NAV ITEMS -->
   </div>
+
+
 </nav>
+
+<div class="panelpop w3-grayscale-min" id="panelpopid" style="display:">
+    <div class="backpop backpop-img"></div>
+    <div class="backpop backpop-filter"></div>
+
+  <div class="popspacer"></div>
+      Welcome to Playguide.com where you can host or attend social events.
+<!--  Welcome to Playguide.com where you can attend home and venue events. --><br><br>
+
+  <div class="welbox1 c-hide-714" >
+<div class="out-rim" style=""></div>
+  </div>
+  <div class="welbox2 c-align-475" >
+    <font color="lightblue">&nbsp;&#9906;&nbsp; Locate Social Events Near You<br></font>
+      &#8226; Party with your favorite Performer<br>
+      &#8226; Celebrate at unique home venues<br>
+      &#8226; Enjoy more fun with your Friends<br>
+      &#8226; Meet new people on our <i>Guestlist</i><br>
+      &#8226; Monetize your fraternity events<br>
+      &#8226; Our app makes it all very easy<br>
+    <img src="assets/PlayguideBrand.png" width="190" style="margin-left: 15px; margin-top: 12px;">
+
+    <div class="sidediv" style="top: 23px;">
+      Join As Partner</div>
+      <div class="sidediv" style="top: 53px;">
+        Musician</div>
+        <div class="sidediv" style="top: 83px;">
+          Speaker</div><!-- Comedian -->
+          <div class="sidediv" style="top: 113px;">
+            Catering</div>
+            <div class="sidediv" style="top: 143px;">
+              Bouncer</div>
+              <div class="sidediv" style="top: 173px;">
+                Dancer</div><!-- Stripper -->
+                <div class="sidediv" style="top: 203px;">
+                  Model</div><!-- /Socialite -->
+
+
+  </div>
+
+  <br><br>
+  <div class="popexitbtn" [routerLink]='["events/LosAngeles"]'>Browse Events</div>
+
+</div>

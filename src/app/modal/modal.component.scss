@@ -1,0 +1,73 @@
+#heavymodal {
+    display: none;
+  position: fixed;
+  top: calc(6% + 50px + 0px);
+  left: 0px;
+  // height: calc(88vh - 50px);
+  width: 100vw;
+  transition: .5s;
+  // background-color: rgba(0,0,0,0.75);
+  // border-top: solid 1px whitesmoke;
+  // border-bottom: solid 1px whitesmoke;
+  color: white;
+  z-index: 10001;
+  pointer-events: painted;
+}
+
+.share-modal {
+  position: fixed;
+    text-align: center;
+  // top: calc(50% - 220px);
+  padding-top: 5px;
+  top: calc(50% - 60px);
+  background-color: rgba(0,0,0,0.8);
+  border-top: solid 1px grey;
+  border-bottom: solid 1px grey;
+  height: 80px;
+  width: 100%;
+  animation: fade-IN-small 1s;
+  // animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transform: scale(1);
+}
+@media (min-width: 900px){
+  .share-modal {
+animation: fade-IN-large 1s;
+animation-fill-mode: forwards;
+  }}
+
+@keyframes fade-IN-small {
+  0% { opacity: 0;}
+  100%   { opacity: 1;}
+}
+
+@keyframes fade-IN-large {
+  0% { opacity: 0;}
+  100%   { opacity: 1; transform: scale(2); }
+}
+
+.point {
+  cursor: pointer;
+}
+
+.x-position {
+  cursor: pointer;
+  position: absolute;
+  font-size: 2rem;
+  color: rgb(100,100,100);
+  top: 22px;
+  right: calc(25% + 10px);
+}
+
+@media (max-width: 900px){
+  .x-position {
+
+    font-size: 1.75rem;
+    top: 25px;
+    right: 10px;
+  }}
+
+
+// REVIEW FADE
+/* Show.parent - Keyframe.child.in.lockframe(css) - Animate>timeout - hide.parent.all [reset] */

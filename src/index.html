@@ -13,7 +13,13 @@
   <!-- Scrollbar Custom CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation.min.css" integrity="sha256-iJQ8dZac/jUYHxiEnZJsyVpKcdq2sQvdA7t02QFmp30= sha384-SplqNBo/0ZlvSdwrP/riIPDozO5ck8+yIm++KVqyMAC53S6m3BaV+2OLpi7ULOOh sha512-ho6hK4sAWdCeqopNZWNy1d9Ok2hzfTLQLcGSr8ZlRzDzh6tNHkVoqSl6wgLsqls3yazwiG9H9dBCtSfPuiLRCQ==" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -49,18 +55,18 @@
               $('#sidelayer1, #sidebar, #content').toggleClass('active');
           });
 
-          $('.closesmall').on('click', function () {
-            $('.cover').css('transition', '1s')
-            $('.cover').css('opacity', '0')
-            setTimeout(function(){
-              $('#sidelayer1, #sidebar, #content').toggleClass('active');
-              setTimeout(function(){
-                $('.cover').css('transition', '0s')
-                $('.cover').css('opacity', '1')
-              }, 500);
-            }, 500);
-
-          });
+          // $('.closesmall').on('click', function () {
+          //   $('.cover').css('transition', '1s')
+          //   $('.cover').css('opacity', '0')
+          //   setTimeout(function(){
+          //     $('#sidelayer1, #sidebar, #content').toggleClass('active');
+          //     setTimeout(function(){
+          //       $('.cover').css('transition', '0s')
+          //       $('.cover').css('opacity', '1')
+          //     }, 500);
+          //   }, 500);
+          //
+          // });
 
           $(window).resize(function(){
            if($(window).width() >= 993){

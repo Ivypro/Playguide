@@ -25,7 +25,8 @@ import { ScannerComponent } from './scanner/scanner.component';
 import { NailheadComponent } from './nailhead/nailhead.component';
 import { EComponent } from './e/e.component';
 import { FormsModule} from '@angular/forms';
-import { GuestlistioComponent } from './guestlistio/guestlistio.component'
+import { GuestlistioComponent } from './guestlistio/guestlistio.component';
+import { ModalComponent } from './modal/modal.component'
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { GuestlistioComponent } from './guestlistio/guestlistio.component'
     NailheadComponent,
     EComponent,
     DateSuffix,
-    GuestlistioComponent
+    GuestlistioComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
