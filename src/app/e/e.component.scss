@@ -165,7 +165,7 @@ width: 100%;
   width: 5px;
   right: -5px;
   top: 0px;
-  background-color: rgba(0,0,0,.65);
+  background-color: rgba(0,0,0,.35);
 }
 
 .nailbar {
@@ -242,7 +242,7 @@ _:default:not(:root:root), .naillay:hover {
 .nailspacer {
   width: 100%;
   height: 2px;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.35);
 }
 
 .sel {
