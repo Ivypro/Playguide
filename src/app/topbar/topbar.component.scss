@@ -293,6 +293,17 @@ width: 1000px;
   width: 755px;
     }}
 
+    @media (max-width:767px){
+      .top-menu {
+    width: 555px;
+      }}
+
+      @media (max-width:575px){
+        .top-menu {
+      right: 1%;
+      transform: translateX(0%);
+        }}
+
     .menu-obj {
       position: absolute;
       text-align: center;
