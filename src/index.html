@@ -41,7 +41,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
 
+
   <script type="text/javascript">
+
       $(document).ready(function () {
 
           $("#sidebar").mCustomScrollbar({
@@ -52,17 +54,11 @@
               $('#sidelayer1, #sidebar, #content').toggleClass('active');
           });
 
-
             $('.menu-item').on('click', function () {
               if($(window).width() <= 600){
                 $('#sidelayer1, #sidebar, #content').addClass('active');
                  }
             });
-
-
-          //     setTimeout(function(){
-          //       $('.cover').css('transition', '0s')
-          //     }, 500);
 
           $(window).resize(function(){
            if($(window).width() >= 993){
@@ -73,44 +69,22 @@
 
       });
 
-      // END DOC:READY
+      //     setTimeout(function(){
+      //       $('.cover').css('transition', '0s')
+      //     }, 500);
 
-
-      function closeBar() {
-                // $('#sidelayer1, #sidebar, #content').addClass('active')
-      }
+// I would like to trigger a click event on a HTML element in Typescript/Reactjs.
+// ( Trigger TS in componenet from outside component )
+// let element: Element = document.getElementsByClassName('btn')[0];
+// element.click();
 
   </script>
-
-
-
 
   <script type="text/javascript">
 
   function updateShareUrl(){
     document.getElementById('dyShareHTML').innerHTML =document.location.href;
   }
-
-  // function soonHidden() {
-  //     $('.cityitemsoon').css('display', 'none');
-  // }
-
- // function enterOnTimeOut(ms){
- //     /* showEvents(); */
- //     // setTimeout(function(){  document.getElementById('panelid').style.display = ""; }, ms);
- //   }
-
-  //  function showEvents() {
-  //    document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
-  // }
-
-   // function enter() {
-   //     document.getElementById('panelpopid').style.display = "none";
-   //     /* document.getElementById('panelid').style.display = ""; */
-   //     $('.enter-act1').css('display', '');
-   //     $('.enter-act2').css('display', '');
-   //     $('.enter-delay').css('visibility', 'visible');
-   // }
 
   function scrollNailL() {
       document.getElementById('nailscroller').scrollBy(-42, 0);
@@ -144,24 +118,8 @@ function closeTfour() {
 function resetPostForm() {
     document.getElementById("postformid").reset();
 }
-// function changeJavascript(){
-    // document.getElementById( "a" ).setAttribute( "onClick", "javascript: Boo();" );
-// }
 
   </script>
-
-<!-- - JQUERY - --->
-<!--- hide dash --->
-
-<!-- <script type="text/javascript">
-  $(document).ready(function () {
-    $('#panelid').css('display', 'none');
-});
-
-</script> -->
-
-
-
 
 <!-- LOGIN TABS -->
   <script>
@@ -192,7 +150,6 @@ function toggle(className, displayState){
         elements[i].style.display = displayState;
     }
 }
-
 
 </script>
 
@@ -237,8 +194,6 @@ function showDivs2(n) {
   x[slideIndex2-1].style.display = "block";
 }
 </script>
-
-<!--- ADVANCED+ HOMEPAGE SLIDER [BETA 1 SYNC] --->
 
 
 
@@ -297,133 +252,23 @@ function shareFunction() {
 }
 </script>
 
-<!--- BACKGROUND SHIFTING FUNCTIONS -->
+<!--- BAR SHIFTING FUNCTIONS -->
 <script type="text/javascript">
-
-// function loginFunction() {
-//    var x = document.getElementsByClassName("dash-background");
-//    var i; for (i = 0; i < x.length; i++)
-//    { x[i].setAttribute("style", "opacity: 0;"); };
-//     document.getElementById('bg-blur').style.backgroundImage = "url('assets/pgBack12.jpg')";
-//     document.getElementById('content').style.backgroundImage = "url('assets/pgBack12.jpg')";
-// }
-//
-//
-// function hostFunction() {
-//   var x = document.getElementsByClassName("not-host");
-//   var i; for (i = 0; i < x.length; i++)
-//   { x[i].setAttribute("style", "display: none"); };
-//   var x = document.getElementsByClassName("bg-host");
-//   var i; for (i = 0; i < x.length; i++)
-//   { x[i].setAttribute("style", "display: block"); };
-//
-// // FADER
-//   // var x = document.getElementsByClassName("bg-host");
-//   // var i; for (i = 0; i < x.length; i++)
-//   // { x[i].setAttribute("style", "opacity: 1;"); };
-//   // setTimeout(function(){
-//   //   var x = document.getElementsByClassName("not-host");
-//   //   var i; for (i = 0; i < x.length; i++)
-//   //   { x[i].setAttribute("style", "opacity: 0;"); };
-//   // }, 125);
-//   //   setTimeout(function(){
-//   //   var x = document.getElementsByClassName("bg-black");
-//   //   var i; for (i = 0; i < x.length; i++)
-//   //   { x[i].setAttribute("style", "display: block;"); };
-//   // }, 400);
-//
-//     $('.cityitemsoon').css('display', 'none');
-// }
-// function staffFunction() {
-//   var x = document.getElementsByClassName("not-ent");
-//   var i; for (i = 0; i < x.length; i++)
-//   { x[i].setAttribute("style", "display: none"); };
-//   var x = document.getElementsByClassName("bg-ent");
-//   var i; for (i = 0; i < x.length; i++)
-//   { x[i].setAttribute("style", "display: block"); };
-//
-// // FADER
-//   // var x = document.getElementsByClassName("bg-ent");
-//   // var i; for (i = 0; i < x.length; i++)
-//   // { x[i].setAttribute("style", "opacity: 1;"); };
-//   // setTimeout(function(){
-//   //   var x = document.getElementsByClassName("not-ent");
-//   //   var i; for (i = 0; i < x.length; i++)
-//   //   { x[i].setAttribute("style", "opacity: 0;"); };
-//   // }, 125);
-//   // setTimeout(function(){
-//   //   var x = document.getElementsByClassName("bg-black");
-//   //   var i; for (i = 0; i < x.length; i++)
-//   //   { x[i].setAttribute("style", "display: block;"); };
-//   // }, 400);
-//
-// }
-// function securityFunction() {
-//   var x = document.getElementsByClassName("not-sec");
-//   var i; for (i = 0; i < x.length; i++)
-//   { x[i].setAttribute("style", "display: none"); };
-//   var x = document.getElementsByClassName("bg-sec");
-//   var i; for (i = 0; i < x.length; i++)
-//   { x[i].setAttribute("style", "display: block"); };
-//
-// // FADER
-//   // var x = document.getElementsByClassName("bg-sec");
-//   // var i; for (i = 0; i < x.length; i++)
-//   // { x[i].setAttribute("style", "opacity: 1;"); };
-//   // setTimeout(function(){
-//   //   var x = document.getElementsByClassName("not-sec");
-//   //   var i; for (i = 0; i < x.length; i++)
-//   //   { x[i].setAttribute("style", "opacity: 0;"); };
-//   // }, 125);
-//   //   setTimeout(function(){
-//   //   var x = document.getElementsByClassName("bg-black");
-//   //   var i; for (i = 0; i < x.length; i++)
-//   //   { x[i].setAttribute("style", "display: block;"); };
-//   // }, 400);
-//
-// }
-function blackFunction() {
-    document.getElementById('content').style.backgroundImage = "url('assets/blackbg.png')";
-}
 
 function styleFunction() {
 $('.navbar').css('background', 'rgba(0,0,50,1)');
 $(".navbar-brand").attr("onclick","style2Function()");
-$('.enter-delay').css('display', 'none');
-$('#sidebar').css('background-color', 'rgba(75,75,75,1)');
-$('.panel').css({'margin-left': '6%', 'margin-right': '6%', 'margin-top': '5px', 'height': 'calc(76vh + 40px)'});
 }
 
 function style2Function() {
 $('.navbar').css('background', 'rgba(0,75,0,1)');
-$('#sidebar').css('background-color', 'rgba(100,100,100,1)');
 $(".navbar-brand").attr("onclick","style3Function()");
 }
 
 function style3Function() {
 $('.navbar').css('background', 'rgba(100,0,0,1)');
 $(".navbar-brand").attr("onclick","styleFunction()");
-$('.enter-delay').css('display', '');
-$('#sidebar').css('background-color', '#222');
-$('#panelid').css({'margin-left': '10%', 'margin-right': '10%', 'margin-top': '25px', 'height': '76vh'});
 }
-
-// $(window).resize(function(){
-//  if($(window).width() >= 1024){
-//     var targetOffset = $("#section--4").offset().top;
-//     var $w = $(window).scroll(function() {
-//         if ( $w.scrollTop() + 200 > targetOffset ) {
-//             $("#logo").fadeIn(500);
-//             $("#logo2").fadeOut('slow');
-//             $("header").css({"overflow": "hidden"});
-//         } else {
-//             $("#logo2").fadeIn(2000)
-//             $("#logo").fadeOut('fast');
-//             $("header").css({"overflow": "visible"});
-//         }
-//       });
-//    }
-// });
 
 </script>
 </html>
