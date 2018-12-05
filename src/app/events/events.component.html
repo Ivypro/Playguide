@@ -1,3 +1,4 @@
+
 <img *ngIf="this.dataSer.photoes.length > 0" src (error)="closeFlip()" style="display: none">
 
 <img *ngIf="this.dataSer.photoes.length==0" src (error)="openFlipM()" style="display: none">
@@ -57,20 +58,9 @@
   </div>
   </div>
 
-<a onclick="$('#panelid').toggleClass('block');$('.material').toggleClass('none');" a href="javascript:;"></a>
 
 </div>
 </div>
 
 
-</div><!--- end container
-<img src onerror="
-$('.loader').css('opacity', '1');
-setTimeout(function(){
-$('.loader').css('opacity', '0');
-}, 1250);
-setTimeout(function(){
-$('.material').css('display', 'block');
-}, 1850);
-">
-<!--- Prototype --->
+</div>

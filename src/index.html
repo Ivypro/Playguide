@@ -73,14 +73,15 @@
       //       $('.cover').css('transition', '0s')
       //     }, 500);
 
-// I would like to trigger a click event on a HTML element in Typescript/Reactjs.
-// ( Trigger TS in componenet from outside component )
-// let element: Element = document.getElementsByClassName('btn')[0];
-// element.click();
-
   </script>
 
   <script type="text/javascript">
+
+  function testing123(){
+    document.getElementById('buttonio').click();
+    // IT WORKS !!!!
+    // ( Trigger TS in componenet from outside component )
+  }
 
   function updateShareUrl(){
     document.getElementById('dyShareHTML').innerHTML =document.location.href;
