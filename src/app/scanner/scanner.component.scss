@@ -29,6 +29,18 @@
   cursor: pointer;
 }
 
+.lowlefticon {
+  position: absolute;
+  text-align: center;
+  font-size: .8rem;
+  color: white;
+  width: 37px;
+  height: 18px;
+  left: 0px;
+  bottom: 7px;
+  background-color: rgba(0,0,0,0.6)
+}
+
 .lowrightshare {
   position: absolute;
   background-image: url('/assets/facebook.png');

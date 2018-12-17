@@ -169,3 +169,20 @@ margin: 0 auto;
 .box::-ms-input-placeholder { /* Microsoft Edge */
    color: white;
 }
+
+.rent-tip:hover .the-rent-tip {
+display: block;
+}
+
+.the-rent-tip {
+  display: none;
+  position: absolute;
+  top: -158px;
+  right: -270px;
+  width: 295px;
+  height: 550px;
+  background-image: url('/assets/rent-tip.jpeg');
+  background-position: center;
+  background-size: cover;
+  z-index: 5000;
+}

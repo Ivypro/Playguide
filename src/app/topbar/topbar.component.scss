@@ -318,9 +318,10 @@ width: 1000px;
       right: 0px;
         border: solid 1px darkgrey;
       width: 200px;
-      height: 259px;
+      height: 276px;
       background-color: lightgrey;
-      transition: .3s;
+      background-color: rgba(12,13,16,1);
+      transition: .5s;
     }
 
     .menu-obj.active {
@@ -355,6 +356,17 @@ width: 1000px;
       background-color: grey;
       border-top: solid 1px grey;
       border-bottom: solid 1px grey;
+      margin-bottom: -5px;
+    }
+
+    .menu-pro-l {
+      margin-top: -5px;
+      margin-bottom: 5px;
+      color: whitesmoke;
+      -webkit-font-smoothing: antialiased;
+      background-color: grey;
+      border-top: solid 1px grey;
+      border-bottom: solid 1px grey;
     }
 
     .menu-pro:hover {
@@ -365,11 +377,21 @@ width: 1000px;
       cursor: alias;
     }
 
+    .menu-pro-l:hover {
+      // background-color: rgba(125,0,0,1); RED
+      // background-color: rgba(88,58,58,1);
+      background-color: rgba(101,89,74,1);
+      border-top: solid 1px grey;
+      border-bottom: solid 1px grey;
+      cursor: alias;
+    }
+
     .menu-dollar {
       position: absolute;
       font-size: .7rem;
       color: rgb(0,150,150);
-      top: 109px;
+      // top: 109px;
+      top: 126px;
       right: 0px;
       background-color: rgb(230,230,230);
       border: solid 1px rgb(240,240,240);
@@ -379,6 +401,7 @@ width: 1000px;
 
     .menu-item {
       cursor: pointer;
+      color: rgb(225,225,225);
       -webkit-font-smoothing: antialiased;
       width: 85%;
       margin: 0 auto;
@@ -396,3 +419,16 @@ width: 1000px;
       // background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(125,70,65,0.3), rgba(0,0,0,0));
         background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(100,100,100,0.3), rgba(0,0,0,0));
     }
+
+.limo-service-2 {
+    position: relative;
+     left: 26px;
+     top: 253px;
+     border-radius: 2.5px;
+     border: solid 1px grey;
+     width: 120px;
+     background-color: rgba(30,30,30,0.65);
+     line-height: 1.2;
+     color: rgb(255,255,255);
+      font-size: 0.9rem;
+}

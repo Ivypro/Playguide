@@ -14,6 +14,7 @@
   pointer-events: painted;
 }
 
+
 .share-modal {
   position: fixed;
     text-align: center;
@@ -67,6 +68,41 @@ animation-fill-mode: forwards;
     top: 25px;
     right: 10px;
   }}
+
+
+  #heavymodal2 {
+      display: none;
+    position: fixed;
+    top: calc(6% + 50px + 0px);
+    left: 0px;
+    // height: calc(88vh - 50px);
+    width: 100vw;
+    transition: .5s;
+    // background-color: rgba(0,0,0,0.75);
+    // border-top: solid 1px whitesmoke;
+    // border-bottom: solid 1px whitesmoke;
+    color: white;
+    z-index: 1010;
+    pointer-events: painted;
+  }
+
+  .limo-modal {
+    position: fixed;
+      text-align: center;
+    // top: calc(50% - 220px);
+    padding-top: 5px;
+    top: calc(10vh + 15px);
+    left: 7%;
+    background-color: rgba(0,0,0,0.85);
+    border: solid 1px grey;
+    height: 80vh;
+    width: 86%;
+    animation: fade-IN-small 1s;
+    // animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform: scale(1);
+  }
 
 
 // REVIEW FADE

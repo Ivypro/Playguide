@@ -7,7 +7,8 @@
 
 <div *ngIf="this.dataSer.photoes.length >0" class="uslide"  [ngStyle]="{'background-image': 'url(' + this.dataSer?.currentImgUrl + ')'}">
 <a routerLink="/e/{{this.dataSer.selectedEvent?.heading.split(' ').join('-')}}" onclick="soonHidden()"><div class="lowrighticon"></div></a>
-<div onclick="$('#sharemodalid').show(); updateShareUrl();" class="lowrightshare hide"></div>
+<div class="lowlefticon w3-hide-medium w3-hide-large"><b>{{this.dataSer.selectedEvent?.price!=0 ? '$'+this.dataSer.selectedEvent?.price : "Free" ||this.dataSer.events[0]?.price}}</b></div>
+<div onclick="$('#sharemodalid').show(); updateShareUrl();" class="lowrightshare hide"><!-- REVIEW --></div>
 </div>
 <app-buttons></app-buttons>
   <div class="infodetails" *ngIf="this.dataSer.photoes.length >0">
