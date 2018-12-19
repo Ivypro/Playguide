@@ -18,6 +18,7 @@ data:any=[];
    }
 
   ngOnInit() {
+    document.title = "Playguide - Find a Party";
      document.getElementById('panelpopid').style.display = "none";
     // Style Norms
     var x = document.getElementsByClassName("dash-background");

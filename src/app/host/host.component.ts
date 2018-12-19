@@ -14,6 +14,7 @@ bal = '0';
   constructor() { }
 
   ngOnInit() {
+    document.title = "Playguide - Host a Party";
     document.getElementById('panelpopid').style.display = "none";
     // Step 2
     var x = document.getElementsByClassName("not-host");
