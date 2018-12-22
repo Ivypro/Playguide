@@ -97,6 +97,7 @@ animation-fill-mode: forwards;
     border: solid 1px grey;
     height: 80vh;
     width: 86%;
+    overflow: hidden;
     animation: fade-IN-small 1s;
     // animation-timing-function: linear;
     animation-iteration-count: 1;
@@ -107,3 +108,16 @@ animation-fill-mode: forwards;
 
 // REVIEW FADE
 /* Show.parent - Keyframe.child.in.lockframe(css) - Animate>timeout - hide.parent.all [reset] */
+
+.bigger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  font-size: 1.2em;
+  transform: translate(-50%,-66%);
+}
+
+.closer {
+  margin-bottom: 10px;
+}
