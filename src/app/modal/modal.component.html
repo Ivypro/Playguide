@@ -5,7 +5,14 @@
 <!-- SHARE MODAL -->
 <div onclick="$('#heavymodal').css({'opacity': '0'});setTimeout(function(){$('#heavymodal').css({'display': 'none'});}, 500);" class="share-modal">
 
-<font onclick="$('#heavymodal').css({'opacity': '0'});setTimeout(function(){$('#heavymodal').css({'display': 'none'});$('#sharemodalid').show(); updateShareUrl();}, 500);">
+<font class="w3-hide-small" onclick="$('#heavymodal').css({'opacity': '0'});setTimeout(function(){$('#heavymodal').css({'display': 'none'});$('#sharemodalid').show(); updateShareUrl();}, 500);">
+<img src="/assets/email.png" width="47" class="point" style="margin-right: 11px;">
+<img src="/assets/facebook.png" width="43" class="point" style="margin-right: 5px;">
+<img src="/assets/twitter.png" width="65" class="point">
+<img src="/assets/linkedin.png" width="45" class="point">
+<img src="/assets/instagram.png" width="47" class="point" style="margin-left: 11px;">
+</font>
+<font class="w3-hide-medium w3-hide-large" onclick="$('#heavymodal').css({'opacity': '0'});setTimeout(function(){$('#heavymodal').css({'display': 'none'}); updateShareUrl();setTimeout(function(){ shareFunction();}, 0);}, 500);">
 <img src="/assets/email.png" width="47" class="point" style="margin-right: 11px;">
 <img src="/assets/facebook.png" width="43" class="point" style="margin-right: 5px;">
 <img src="/assets/twitter.png" width="65" class="point">
@@ -26,11 +33,12 @@
 <div onclick="$('#heavymodal2').css({'opacity': '0'});setTimeout(function(){$('#heavymodal2').css({'display': 'none'});}, 500);" class="limo-modal">
 
 <div class="bigger">
+  <font class="w3-hide-medium w3-hide-large"><br><br><br><br><br></font>
 <h4 class="closer">Coming Soon..</h4>
 
 <h1>Playguide Tours & Limos</h1><br>
 <br>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; padding-left: 28px;padding-right: 28px;">
   <i class="fas fa-car"></i> &nbsp;&nbsp;&nbsp; To and from your event, or just cruise aroud the city.<br>
   <br>
 <i class="fas fa-glass-martini"></i> &nbsp;&nbsp;&nbsp; Enjoy recreational activies, cocktails, cuisine from the comfort of your limo cabin.<br>

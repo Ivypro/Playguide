@@ -40,7 +40,7 @@ animation-fill-mode: forwards;
 
 @keyframes fade-IN-small {
   0% { opacity: 0;}
-  100%   { opacity: 1;}
+  100%   { opacity: 1; transform: scale(1);}
 }
 
 @keyframes fade-IN-large {
@@ -94,7 +94,8 @@ animation-fill-mode: forwards;
     top: calc(10vh + 15px);
     left: 7%;
     background-color: rgba(0,0,0,0.85);
-    border: solid 1px grey;
+    border: solid 2px grey;
+    border-radius: 30px;
     height: 80vh;
     width: 86%;
     overflow: hidden;
@@ -102,7 +103,6 @@ animation-fill-mode: forwards;
     // animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transform: scale(1);
   }
 
 
@@ -115,7 +115,7 @@ animation-fill-mode: forwards;
   left: 50%;
   width: 100%;
   font-size: 1.2em;
-  transform: translate(-50%,-66%);
+  transform: translate(-50%,-62%);
 }
 
 .closer {
